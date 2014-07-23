@@ -1,0 +1,1236 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800&subset=latin,cyrillic);
+@font-face {
+    font-family: 'hagin_caps_mediumregular';
+    src: url('../fonts/hagin_caps_medium-webfont.eot');
+    src: url('../fonts/hagin_caps_medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/hagin_caps_medium-webfont.woff') format('woff'),
+         url('../fonts/hagin_caps_medium-webfont.ttf') format('truetype'),
+         url('../fonts/hagin_caps_medium-webfont.svg#hagin_caps_mediumregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@mixin iphone {
+  @media only screen and (max-width: 480px) {
+    @content;
+  }
+}
+@mixin ipad {
+  @media only screen and (max-width: 768px) {
+    @content;
+  }
+}
+@mixin interval-991 {
+  @media only screen and (max-width: 991px) {
+    @content;
+  }
+}
+@mixin ipad-h {
+  @media only screen and (max-width: 1024px) {
+    @content;
+  }
+}
+@mixin interval-1200 {
+  @media only screen and (max-width: 1200px) {
+    @content;
+  }
+}
+@mixin interval-600 {
+  @media only screen and (max-width: 600px) {
+    @content;
+  }
+}
+
+$red: #e5432a;
+$bronze: #cfc990;
+$hagin: 'hagin_caps_mediumregular', serif;
+
+
+body {
+	background: #000 url(../_img/bg.png) repeat-x left bottom;
+	font-family: 'Open Sans', sans-serif;
+	color: #fff;
+}
+
+.btn-default {
+	background: $red url(../_img/btn.png) repeat-x left top;
+	border: none;
+	border-radius: 0;
+	color: #fff;
+	font-size: 16px;
+	font-weight: bold;
+	padding: 8px 24px;
+	&:hover {
+		color: #fff;
+	}
+}
+
+.button-thanks {
+	font-family: $hagin;
+	color: #fff;
+	background: #437826 url(../_img/btn-thank.png);
+	border: none;
+	border-radius: 0;
+	font-size: 24px;
+	padding-left: 30px;
+	padding-right: 30px;
+	&:hover {
+		color: inherit;
+	}
+}
+.button-buy {
+	font-family: $hagin;
+	color: #000;
+	font-size: 24px;
+	padding: 5px 25px;
+	background: #d39d26 url(../_img/btn-buy.png);
+	margin: 13px 0 7px;
+	&:hover {
+		color: #fff;
+		background: $red url(../_img/btn.png);
+	}
+}
+.content {
+	&.clouds {
+		position: relative;
+		&:before {
+			content: "";
+			position: absolute;
+			right: 0;
+			top: -15px;
+			width: 640px;
+			height: 80px;
+			background: url(../_img/content-clouds.png) no-repeat right top;
+			z-index: -1;
+		}
+		
+	}
+}
+.header {
+	padding-top: 13px;
+	padding-bottom: 13px;
+	background: #000;
+	.logo {
+		display: block;
+		text-align: center;
+		padding-top: 10px;
+		@include ipad { padding-bottom: 10px;}
+		img {
+			@include ipad-h { max-width: 90%;}
+		}
+		
+	}
+	.button-thanks {
+		font-size: 19px;
+		padding: 3px 10px;
+		margin-left: -40px;
+		margin-top: 10px;
+		
+		@include ipad-h { margin-left: -70px;}
+		@include interval-991 { margin-left: -5px;}
+		@include ipad { margin-left: 0px;}
+		@include iphone { margin-left: 0px;}
+	}
+	.social-top {
+		text-align: right;
+		padding-top: 15px;
+		white-space: nowrap;
+		position: relative;
+		a {
+			display: inline-block;
+			overflow: hidden;
+			text-indent: 9999px;
+			width: 23px;
+			height: 23px;
+			margin: 0 2px;
+			background: url(../_img/social-top.png);
+			&.st-vk { background-position: 0 0;}
+			&.st-fb { background-position: -32px 0;}
+			&.st-tw { background-position: -63px 0;}
+			&.st-yt { background-position: -95px 0;}
+			&.st-sc { background-position: -126px 0;}
+		}
+		@include iphone {
+			text-align: left;
+			padding-top: 15px;
+			left: -20px;
+		}
+	}
+}
+
+.main-nav {
+	padding-top: 2px;
+	white-space: nowrap;
+	.nav-column {
+		display: inline-block;
+		@include iphone {
+			display: block;
+		}
+	}
+	a {
+		display: block;
+		color: #fff;
+		text-decoration: none;
+		height: 23px;
+		padding-left: 34px;
+		padding-right: 30px;
+		position: relative;
+		margin-bottom: 3px;
+		line-height: 23px;
+		font-size: 16px;
+		//width: 140px;
+		&::before {
+			content: "";
+			position: absolute;
+			left: 10px;
+			top: 4px;
+			width: 20px;
+			height: 17px;
+			background: url(../_img/star.png);
+			opacity: .6;
+		}
+		&:hover {
+			color: #c2171a;
+			&:before {
+				opacity: 1;
+			}
+		}
+		@include iphone {
+			display: inline-block;
+			width: 49%;
+		}
+	}
+	.nav-current {
+		display: block;
+		color: #fff;
+		text-decoration: none;
+		height: 23px;
+		padding-left: 34px;
+		padding-right: 30px;
+		position: relative;
+		margin-bottom: 3px;
+		line-height: 23px;
+		font-size: 16px;
+		background: url(../_img/m-current.png) no-repeat left top;
+		@include iphone {
+			display: inline-block;
+			width: 49%;
+		}
+	}
+}
+
+.footer {
+	background: url(../_img/footer.png) no-repeat center top;
+	padding-top: 26px;
+	padding-bottom: 95px;
+	@include ipad {
+		padding-bottom: 40px;
+	}
+	@include iphone {
+		padding-top: 15px;
+		padding-bottom: 10px;
+	}
+	.logo-bottom {
+		padding-left: 60px;
+		img {
+			max-width: 100%;
+		}
+		@include ipad {
+			text-align: center;
+			padding-left: 0;
+		}
+		@include iphone {
+			img {
+				max-width: 60%;
+			}
+		}
+	}
+	.nav-bottom {
+		padding: 7px 0;
+		text-align: center;
+		@include ipad {
+			text-align: center;
+			padding-top: 0;
+			padding-right: 10px;
+		} 
+		@include iphone {
+			padding: 7px 0;
+		}
+		a {
+			color: #fff;
+			text-decoration: none;
+			margin: 0 8px;
+			@include ipad {
+				margin: 0 10px;
+			} 
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	.social-bottom {
+		text-align: right;
+		padding: 2px 15px;
+		white-space: nowrap;
+		position: relative;
+		left: -30px;
+		@include ipad-h {
+			text-align: left;
+			padding: 0px;
+			position: relative;
+			left: -20px;
+		}
+		@include ipad {
+			text-align: center;
+			padding: 10px;
+			left: 0;
+		}
+		@include iphone {
+			top: -10px;
+		}
+		a {
+			display: inline-block;
+			width: 23px;
+			height: 23px;
+			background: url(../_img/social-bottom.png);
+			text-indent: 9999px;
+			margin: 3px;
+			overflow: hidden;
+			&.sb-vk { background-position: 0 0;}
+			&.sb-fb { background-position: -31px 0;}
+			&.sb-tw { background-position: -63px 0;}
+			&.sb-yt { background-position: -95px 0;}
+			&.sb-sc	 { background-position: -127px 0;}
+		}
+	}
+}
+
+.breadcrumb {
+	background: transparent;
+	color: #83816f;
+	font-size: 12px;
+	padding: 20px 0 5px;
+	@include iphone {
+		font-size: 11px;
+	}
+	a {
+		color: $bronze;
+		text-decoration: none;
+		border-bottom: solid 1px;
+	}
+}
+
+.heading {
+	font-family: $hagin;
+	color: $bronze;
+	font-size: 40px;
+	font-weight: normal;
+	margin-bottom: 35px;
+	text-transform: uppercase;
+	span {
+		background: url(../_img/heading_line.png) no-repeat center bottom;
+		padding: 0 8px 5px;
+	}
+}
+
+
+.friends {
+	background: url(../_img/clouds.png) no-repeat center 20px;
+	margin-top: 35px;
+	@include ipad {
+		background-position: right 20px;
+	}
+	@include iphone {
+		background: none;
+	}
+	.friend {
+		background: #fff url(../_img/corner.png) repeat-x left bottom;
+		height: 147px;
+		text-align: center;
+		line-height: 147px;
+		color: #000;
+		margin-bottom: 20px;
+		img {
+			max-width: 100%;
+		}
+	}
+	.friends-list {
+		position: relative;
+		&:before {
+			content: "";
+			position: absolute;
+			left: 17.6%;
+			bottom: 19px;
+			width: 216px;
+			height: 44px;
+			z-index: 10;
+			background: url(../_img/friend-decor-1.png);
+		}
+		&:after {
+			content: "";
+			position: absolute;
+			right: 0;
+			bottom: 19px;
+			width: 153px;
+			height: 23px;
+			z-index: 10;
+			background: url(../_img/friend-decor-2.png);
+		}
+	}
+	p {
+		margin: 45px 0 65px;
+		@include iphone {
+			margin: 25px 0 45px;
+		}
+	}
+}
+.sub-header {
+	//padding-top: 13px;
+	.decor {
+		height: 26px;
+		background: url(../_img/violet-decor.png) repeat-x center bottom;
+		position: relative;
+	}
+}
+
+.inner-sub-header {
+	overflow: hidden;
+	.decor {
+		height: 26px;
+		background: url(../_img/violet-decor.png) repeat-x center bottom;
+		position: relative;
+	}
+	.afisha {
+		height: 82px;
+		background: url(../_img/inner-afisha.jpg) no-repeat right top;
+		position: relative;
+		margin-right: -15px;
+		position: relative;
+		@include interval-1200 {
+			margin-right: -30px;
+		}
+
+		@include interval-991 {
+			height: 1px;
+			background: transparent;
+			margin-right: -30px;
+		}
+		&:before {
+			content: "";
+			position: absolute;
+			left: 10px;
+			top: 0px;
+			width: 3px;
+			height: 108px;
+			background: url(../_img/stitch.png) no-repeat center top;
+			z-index: 10;
+			@include interval-991 {
+				display: none;
+			}
+			@include interval-991 {
+				//height: 100%;
+			}
+		}
+		&:after {
+			content: "";
+			position: absolute;
+			right: 10px;
+			top: 0px;
+			width: 3px;
+			height: 108px;
+			background: url(../_img/stitch.png) no-repeat center top;
+			z-index: 10;
+			@include interval-991 {
+				display: none;
+			}
+			@include interval-991 {
+				//height: 100%;
+			}
+		}
+		.gady {
+			position: absolute;
+			left: 30px;
+			bottom: -26px;
+			width: 163px;
+			height: 83px;
+			background: url(../_img/gady_small.png) no-repeat left top;
+			z-index: 10;
+			@include interval-1200 {
+				bottom: -108px;
+				left: 10%;
+				display: none;
+			}
+			@include interval-991 {
+				//bottom: 0;
+			}
+			@include iphone {
+				//display: none;
+			}
+		}
+	}
+	.afisha-slider {
+		height: 82px;
+		left: -15px;
+		&:after { display: none;}
+		&:before { display: none;}
+		@include interval-1200 {
+			left: 0;
+		}
+		.carousel-inner {
+			.item {
+				height: 82px;
+				line-height: 82px;
+				@include iphone {
+					padding-top: 20px;
+				}
+			}
+		}
+	}
+	.inner-slider {
+		@include interval-1200 {
+			padding-right: 30px;
+		}
+		@include interval-991 {
+			padding-right: 15px;
+		}
+	}
+}
+
+.afisha-slider {
+	background: url(../_img/afisha_slider_bg.jpg) repeat-x left top;
+	height: 281px;
+	margin-right: -15px;
+	position: relative;
+	&:before {
+		content: "";
+		position: absolute;
+		left: 10px;
+		top: 0px;
+		width: 3px;
+		height: 110%;
+		background: url(../_img/stitch.png) no-repeat center top;
+		z-index: 10;
+		@include interval-991 {
+			//height: 100%;
+		}
+	}
+	&:after {
+		content: "";
+		position: absolute;
+		right: 10px;
+		top: 0px;
+		width: 3px;
+		height: 110%;
+		background: url(../_img/stitch.png) no-repeat center top;
+		z-index: 10;
+		@include interval-991 {
+			//height: 100%;
+		}
+	}
+	.gady {
+		position: absolute;
+		left: 60px;
+		bottom: -26px;
+		width: 163px;
+		height: 83px;
+		background: url(../_img/gady_small.png) no-repeat left top;
+		z-index: 10;
+		@include interval-991 {
+			//bottom: 0;
+		}
+		@include iphone {
+			//display: none;
+		}
+	}
+	.carousel-control {
+		background: url(../_img/slide-arrows.png) no-repeat left top;
+	}
+	.left {
+		background-position: left top;
+		@include iphone { left: 10px;}
+	}
+	.right {
+		background-position: left bottom;
+		@include iphone { right: 10px;}
+	}
+	@include interval-991 {
+		margin-right: 0;
+	}
+	@include iphone {
+		height: auto;
+	}
+}
+.main-collage {
+	margin-left: -15px;
+	@include interval-1200 {
+		height: 281px;
+		img {
+			height: 100%;
+			width: auto;
+		}
+	}
+	@include interval-991 {
+		margin-left: 0;
+		height: auto;
+		
+		display: none;
+		img {
+			height: auto;
+			width: 100%;
+		}
+	}
+	img {
+		width: 100%;
+	}
+}
+
+.listen {
+	padding: 40px 0 90px;
+	background: url(../_img/listen.png) no-repeat left bottom;
+	h2 {
+		margin-left: 60px;
+		margin-top: 0;
+		@include interval-991 {
+			margin-left: 0;
+		}
+		@include interval-600 {
+			text-align: center;
+		}
+	}
+	.embed {
+		padding-right: 90px;
+		padding-left: 10px;
+		@include interval-991 {
+			padding-right: 0;
+			padding-left: 0;
+		}
+		@include iphone {
+			padding-left: 0;
+		}
+	}
+}
+
+.watch {
+	background: #d8d7d1 url(../_img/watch.png) no-repeat left bottom;
+	border: none;
+	margin-top: -1px;
+	padding: 20px 0 60px 30px;
+	position: relative;
+	color: #000;
+	font-size: 13px;
+	&:after {
+		content: "";
+		position: absolute;
+		right: 190px;
+		bottom: 0;
+		width: 198px;
+		height: 27px;
+		background: url(../_img/decor-watch.png);
+		@include iphone {
+			right: 20px;
+		}
+	}
+	h2 {
+		color: #000;
+		//padding-left: 30px;
+		@include interval-600 {
+			text-align: center;
+		}
+	}
+	.watch-item {
+		text-align: center;
+		padding-bottom: 20px;
+		h5 {
+			text-align: center;
+			font-weight: bold;
+		}
+		p {
+			text-align: left;
+		}
+	}
+	@include ipad {
+		padding-top: 10px;
+	}
+	@include iphone {
+		padding-left: 10px;
+		padding-top: 0px;
+		padding-right: 10px;
+		text-align: center;
+	}
+}
+
+.dotted {
+	display: inline-block;
+	width: 160px;
+	height: 160px;
+	padding: 7px;
+	border-radius: 160px;
+	border: dashed 2px #216a9e; 
+	border-style: dashed;
+	overflow: hidden;
+	div {
+		width: 142px;
+		height: 142px;
+		overflow: hidden;
+		border-radius: 142px;
+	}
+	img {
+		//max-width: 160px;
+	}
+	&:hover {
+		border-color: #c10200;
+	}
+}
+
+.index-news {
+	padding-top: 30px;
+	h2 {
+		margin-top: 0;
+		margin-left: 60px;
+		@include interval-991 {
+			margin-left: 0;
+		}
+		@include interval-600 {
+			text-align: center;
+		}
+	}
+	> .row {
+		background: url(../_img/news-clouds.png) no-repeat 60px bottom;
+	}
+}
+.news-item {
+	text-align: center;
+	position: relative;
+	padding-top: 67px;
+	@include interval-600 {
+		padding-top: 0;
+	}
+	//border: solid 1px red;
+	@include iphone {
+		//display: none;
+		padding-left: 0;
+		padding-right: 0;
+		/*
+&:first-child {
+			display: block;
+			margin-left: 15px;
+		}
+		&:last-child {
+			display: block;
+		}
+*/
+	}
+	p {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		padding: 0 20px;
+		@include interval-600 {
+			position: relative;
+			padding: 0 40px 5px;
+		}
+		span {
+			border-bottom: solid 1px transparent;
+		}
+	}
+	a {
+		color: $red;
+		display: block;
+		padding-bottom: 40px;
+		&:hover {
+			text-decoration: none;
+			p {
+				span {
+					border-bottom: solid 1px;
+				}
+			}
+			.dotted {
+				border-color: $red;
+			}
+		}
+		&.active {
+			background: url(../_img/news-active.png) no-repeat center bottom;
+			.dotted {
+				border-color: #fff;
+				@include interval-600 {
+					border-color: #216a9e;
+					&:hover {
+						border-color: $red;
+					}
+				}
+			}
+			@include interval-600 {
+				background: none;
+			}
+		}
+	}
+}
+.all-news {
+	float: right;
+	@include interval-600 {
+		text-align: center;
+		width: 100%;
+		padding-bottom: 60px;
+	}
+}
+.all-news-link {
+	display: inline-block;
+	font-size: 16px;
+	color: #fff !important;
+	width: 137px;
+	height: 137px;
+	background: url(../_img/allnews.png) no-repeat left top;
+	padding-top: 50px;
+	position: relative;
+	right: -30px;
+	top: 10px;
+	&:hover {
+		background-position: left bottom;
+	}
+	@include interval-1200 {
+		right: 30px;
+	}
+	@include interval-600 {
+		margin: auto;
+		left: 0;
+		top: 0;
+	}
+	/*
+@include iphone {
+		right: 15px;
+		top: 30px;
+		width: 100px;
+		height: 100px;
+		border-radius: 100px;
+		background-position: -30px -30px;
+		padding-top: 35px;
+		font-size: 14px;
+		&:hover {
+			background-position: -30px -150px;
+		}
+	}
+*/
+}
+
+.for-mobile-link {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	//background: blue;
+	opacity: .5;
+	z-index: 100;
+	display: none !important;
+	@include interval-600 {
+		display: block !important;
+	}
+}
+.news-detail {
+	background: #d8d7d1 url(../_img/corner.png) repeat-x left bottom;
+	color: #4b4b4b;
+	padding: 4px 10px;
+	font-size: 16px;
+	position: relative;
+	@include iphone {
+		padding: 5px 0;
+	}
+	&:before {
+		content: "";
+		position: absolute;
+		left: 60px;
+		bottom: 100%;
+		width: 193px;
+		height: 27px;
+		background: url(../_img/decor-watch.png);
+		@include interval-1200 {
+			display: none;
+		}
+	}
+	&:after {
+		content: "";
+		position: absolute;
+		right: 200px;
+		bottom: 100%;
+		width: 66px;
+		height: 57px;
+		background: url(../_img/news-decor.png);
+		@include iphone {
+			right: 40px;
+		}
+	}
+	img {
+		margin-bottom: 15px;
+	}
+	> .row {
+		margin: 20px 0 10px;
+		@include interval-600 {
+			margin: 10px 0;
+			display: none
+		}
+	}
+	.news-pic {
+		img {
+			width: 100%;
+		}
+	}
+	.news-text {
+		line-height: 1.4;
+		h3 {
+			margin-top: 0;
+			margin-bottom: 1em;
+			color: $red;
+			background: url(../_img/heading-line.png) no-repeat left bottom;
+			padding-bottom: 20px;
+			.date {
+				display: block;
+				color: #2d2926;
+				font-size: 12px;
+				padding-top: 13px;
+			}
+		}
+		p {
+			margin-bottom: 1.4em;
+			font-weight: normal;
+		}
+	}
+}
+
+.main-image {
+	padding-bottom: 1em;
+	img {
+		width: 100%;
+	}
+	p {
+		margin: 20px 0;
+	}
+	
+}
+.main-content {
+	padding-bottom: 50px;
+	h1 {
+		color: $red;
+		margin-top: 0;
+		@include interval-600 {
+			font-size: 28px;
+		}
+	}
+	h4 {
+		@include interval-600 {
+			font-size: 14px;
+		}
+	}
+	.lead {
+		font-size: 16px;
+		color: #80adc0;
+		padding-right: 80px;
+		@include interval-600 {
+			padding-right: 0;
+		}
+	}
+	p {
+		margin: 1.4em 0;
+	}
+}
+
+.white-link {
+	color: #fff;
+	text-decoration: none;
+	border-bottom: solid 1px;
+	&:hover {
+		color: $red;
+		text-decoration: none;
+	}
+}
+
+.dots {
+	height: 3px;
+	background: url(../_img/heading-line.png) no-repeat left center;
+	border: none;
+}
+
+.back {
+	padding-top: 20px;
+}
+.backlink {
+	font-size: 18px;
+	color: #fff;
+	border-bottom: solid 1px;
+	text-decoration: none !important;
+	position: relative;
+	@include interval-600 {
+		margin-left: 28px;
+	}
+	&:before {
+		content: "";
+		width: 28px;
+		height: 100%;
+		position: absolute;
+		left: -23px;
+		top: 0;
+		background: url(../_img/back.png) no-repeat left 1px;
+	}
+	&:hover {
+		color: $red;
+		&:before {
+			background-position: left -26px;
+		}
+	}
+}
+
+.thumbnails {
+	text-align: center;
+	padding: 20px 10px;
+	.thumb {
+		float: left;
+		width: 33.333333%;
+		@include ipad-h {
+			width: 50%;
+		}
+		@include interval-600 {
+			width: 25%;
+		}
+		@include iphone {
+			width: 50%;
+		}
+	}
+	.dotted {
+		width: 106px;
+		height: 106px;
+		margin-bottom: 10px;
+		> div {
+			width: 88px;
+			height: 88px;
+		}
+	}
+}
+
+.top-filter {
+	float: right;
+	margin-top: -75px;
+	@include interval-600 {
+		float: none;
+		margin-top: 0;
+	}
+}
+.bottom-filter {
+	padding-bottom: 60px;
+}
+.news-filter {
+	text-align: right;
+	font-family: $hagin;
+	font-size: 24px;
+	color: $bronze;
+	@include interval-600 {
+		text-align: center;
+	}
+	@include iphone {
+		font-size: 18px;
+	}
+	a {
+		display: inline-block;
+		text-decoration: none;
+		padding: 4px 10px;
+		color: $bronze;
+		margin: 0 -2px;
+		line-height: 1em;
+		vertical-align: top;
+		&:hover {
+			color: $red;
+		}
+		&.current {
+			background: #cd2a20 url(../_img/btn.png) no-repeat left top;
+			color: #000;
+			cursor: default;
+		}
+		&.prev {
+			width: 32px;
+			height: 32px;
+			overflow: hidden;
+			text-indent: 9999px;
+			background: url(../_img/filter-arrows.png) no-repeat left top;
+			&:hover {
+				background-position: left -32px;
+			}
+		}
+		&.next {
+			width: 32px;
+			height: 32px;
+			overflow: hidden;
+			text-indent: 9999px;
+			background: url(../_img/filter-arrows.png) no-repeat right top;
+			&:hover {
+				background-position: right -32px;
+			}
+		}
+	}
+}
+.news-list {
+	padding: 30px 0 0;
+}
+.news-list-item {
+	display: inline-block;
+	vertical-align: top;
+	width: 24.5%;
+	padding: 0 15px 56px;
+	@include interval-991 {
+		width: 32.9%;
+	}
+	@include interval-600 {
+		width: 49.5%;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	@include iphone {
+		width: 100%;
+		text-align: center;
+	}
+	h3 {
+		line-height: 1.4em;
+		span {
+			border-bottom: solid 1px transparent;
+		}
+	}
+	a {
+		color: $red;
+		&:hover {
+			text-decoration: none;
+			.dotted {
+				border-color: $red;
+			}
+			h3 {
+				text-decoration: none;
+				span {
+					border-bottom: solid 1px;
+				}
+			}
+		}
+	}
+	h3 {
+		font-size: 16px;
+	}
+}
+
+.month {
+	padding-bottom: 46px;
+	&.past {
+		opacity: .3;
+		.buy {
+			display: none;
+		}
+	}
+	&.closest {
+		.month-item {
+			&:nth-child(2) {
+				background: #222 url(../_img/sew.png) repeat-x left bottom;
+			}
+		}
+		h3 {
+			position: relative;
+			overflow: hidden;
+			&:after {
+				content: "";
+				position: absolute;
+				left: 200px;
+				bottom: 1px;
+				width: 165px;
+				height: 60px;
+				background: url(../_img/afisha-decor.png);
+			}
+		}
+	}
+	h3 {
+		margin: 0;
+		background: url(../_img/sew.png) repeat-x left bottom;
+		padding: 15px 10px;
+		font-size: 26px;
+		font-weight: 200;
+	}
+	.month-item {
+		background: url(../_img/sew.png) repeat-x left bottom;
+		padding: 18px 15px;
+	}
+	small {
+		display: block;
+		font-size: 11px;
+		line-height: 1.3em;
+	}
+	.day {
+		font-weight: bold;
+		font-size: 16px;
+		padding-bottom: 4px;
+	}
+	.button-buy {
+		font-size: 20px;
+		margin: 0;
+		font-weight: normal;
+		padding: 3px 20px;
+	}
+	.buy {
+		text-align: right;
+		margin-top: 3px;
+		text-transform: uppercase;
+		@include interval-991 {
+			text-align: center;
+		}
+		@include ipad {
+			padding-top: 13px;
+		}
+	}
+	.event {
+		font-size: 20px;
+		margin: 9px 0px 0 0;
+		position: relative;
+		padding-right: 130px;
+		@include iphone {
+			padding-right: 0;
+			padding-bottom: 0px;
+		}
+		a {
+			color: $red;
+			border-bottom: solid 1px transparent;
+			&:hover {
+				color: #dc8a1f;
+				text-decoration: none;
+				border-bottom: solid 1px;
+			}
+		}
+		.fest-site {
+			position: absolute;
+			right: -40px;
+			top: 4px;
+			font-size: 14px;
+			color: #fff;
+			border-bottom: solid 1px;
+			@include interval-991 {
+				right: 0;
+			}
+			@include iphone {
+				position: relative;
+				display: block;
+				left: 0;
+				right: auto;
+				bottom: 0px;
+				font-size: 12px;
+				margin: 10px 0;
+			}
+			&:hover {
+				color: #dc8a1f;
+				border-bottom: solid 1px;
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
