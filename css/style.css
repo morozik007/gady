@@ -275,16 +275,43 @@ body {
     padding: 0 8px 5px; }
 
 .friends {
-  background: url(../_img/clouds.png) no-repeat center 20px;
-  margin-top: 35px; }
+  background: url(../_img/clouds_friends.png) no-repeat 190px 20px;
+  margin-top: 35px;
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 50px; }
   @media only screen and (max-width: 768px) {
     .friends {
       background-position: right 20px; } }
   @media only screen and (max-width: 480px) {
     .friends {
       background: none; } }
+  .friends:before {
+    content: "";
+    position: absolute;
+    left: 5%;
+    bottom: -1px;
+    width: 216px;
+    height: 44px;
+    z-index: 10;
+    background: url(../_img/friend-decor-1.png); }
+  .friends:after {
+    content: "";
+    position: absolute;
+    right: 10px;
+    bottom: 0px;
+    width: 153px;
+    height: 23px;
+    z-index: 10;
+    background: url(../_img/friend-decor-2.png); }
+  .friends h2 {
+    text-align: left;
+    padding-left: 40px; }
+    @media only screen and (max-width: 480px) {
+      .friends h2 {
+        text-align: center;
+        padding-left: 0; } }
   .friends .friend {
-    background: white url(../_img/corner.png) repeat-x left bottom;
     height: 147px;
     text-align: center;
     line-height: 147px;
@@ -292,31 +319,34 @@ body {
     margin-bottom: 20px; }
     .friends .friend img {
       max-width: 100%; }
+  .friends .friends-thank {
+    overflow: hidden;
+    background: url(../_img/thank_decor.png) repeat-x left bottom; }
+    @media only screen and (max-width: 991px) {
+      .friends .friends-thank {
+        width: 400px;
+        margin: 0 auto 30px; } }
+    @media only screen and (max-width: 480px) {
+      .friends .friends-thank {
+        width: 100%; } }
   .friends .friends-list {
-    position: relative; }
-    .friends .friends-list:before {
-      content: "";
-      position: absolute;
-      left: 17.6%;
-      bottom: 19px;
-      width: 216px;
-      height: 44px;
-      z-index: 10;
-      background: url(../_img/friend-decor-1.png); }
-    .friends .friends-list:after {
-      content: "";
-      position: absolute;
-      right: 0;
-      bottom: 19px;
-      width: 153px;
-      height: 23px;
-      z-index: 10;
-      background: url(../_img/friend-decor-2.png); }
+    position: relative;
+    float: left;
+    width: 75%;
+    padding-right: 30px; }
+    @media only screen and (max-width: 991px) {
+      .friends .friends-list {
+        float: none;
+        width: 100%;
+        padding-right: 0; } }
+    @media only screen and (max-width: 600px) {
+      .friends .friends-list {
+        padding-right: 0; } }
   .friends p {
-    margin: 45px 0 65px; }
+    margin: 48px 0 48px; }
     @media only screen and (max-width: 480px) {
       .friends p {
-        margin: 25px 0 45px; } }
+        margin: 45px 0 45px; } }
 
 .sub-header .decor {
   height: 26px;
@@ -1056,3 +1086,49 @@ h1 {
   .release .release-date {
     font-weight: bold;
     padding-bottom: 3px; }
+
+.cd {
+  color: #e5432a;
+  font-size: 18px;
+  margin-top: -6px; }
+
+.tracklist {
+  font-size: 18px;
+  padding-left: 40px;
+  border-top: dashed 1px #4a4a4a;
+  overflow: hidden;
+  margin: 20px 0 30px;
+  width: 80%; }
+  @media only screen and (max-width: 1024px) {
+    .tracklist {
+      width: 100%; } }
+  @media only screen and (max-width: 480px) {
+    .tracklist {
+      font-size: 16px;
+      padding-left: 30px; } }
+  .tracklist li {
+    position: relative;
+    padding: 10px 65px 10px 5px; }
+    .tracklist li:before {
+      content: "";
+      position: absolute;
+      left: -40px;
+      bottom: 0;
+      width: 150%;
+      height: 1px;
+      border-bottom: dashed 1px #4a4a4a; }
+    .tracklist li a {
+      text-decoration: none;
+      color: #e5432a;
+      border-bottom: solid 1px transparent; }
+      .tracklist li a:hover {
+        border-bottom: solid 1px; }
+    .tracklist li .track-time {
+      position: absolute;
+      right: 0;
+      top: 10px;
+      width: 65px; }
+      @media only screen and (max-width: 480px) {
+        .tracklist li .track-time {
+          width: 50px;
+          font-size: 14px; } }
