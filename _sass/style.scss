@@ -127,7 +127,7 @@ body {
 		margin-left: -40px;
 		margin-top: 10px;
 		
-		@include ipad-h { margin-left: -70px;}
+		@include ipad-h { margin-left: -50px;}
 		@include interval-991 { margin-left: -5px;}
 		@include ipad { margin-left: 0px;}
 		@include iphone { margin-left: 0px;}
@@ -1383,6 +1383,9 @@ h1 {
 	color: #000;
 	position: relative;
 	margin-bottom: 40px;
+	@include ipad {
+		margin-bottom: 0;
+	}
 	&:after {
 		content: "";
 		position: absolute;
@@ -1617,6 +1620,7 @@ h1 {
     text-decoration: none;
     background: url(../_img/big-arrows.png);
     text-indent: 9999px;
+    overflow: hidden;
 }
 
 .jcarousel-control-prev {
