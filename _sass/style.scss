@@ -370,6 +370,9 @@ body {
 	h2 {
 		text-align: left;
 		padding-left: 40px;
+		@include ipad {
+			padding-left: 0;
+		}
 		@include iphone {
 			text-align: center;
 			padding-left: 0;
@@ -818,6 +821,12 @@ body {
 	position: relative;
 	right: -30px;
 	top: 10px;
+	text-align: center;
+	font-weight: bold;
+	&.all-videos-link {
+		padding-top: 40px;
+		right: 0px;
+	}
 	&:hover {
 		background-position: left bottom;
 	}
@@ -1368,12 +1377,275 @@ h1 {
 	}
 }
 
+.video-box {
+	background: #fff url(../_img/corner.png) repeat-x left bottom;
+	padding: 18px;
+	color: #000;
+	position: relative;
+	margin-bottom: 40px;
+	&:after {
+		content: "";
+		position: absolute;
+		left: 100%;
+		top: 30px;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 15px 0 15px 15px;
+		border-color: transparent transparent transparent #ffffff;
+		@include ipad {
+			display: none;
+		}
+	}
+	&:before {
+		content: "";
+		position: absolute;
+		right: 18px;
+		bottom: 100%;
+		width: 432px;
+		height: 60px;
+		background: url(../_img/decor-video.png);
+	}
+}
+.video-title {
+	padding-top: 25px;
+	@include ipad {
+		padding-top: 0;
+	}
+}
+
+.video-item {
+	display: inline-block;
+	vertical-align: top;
+	height: 380px;
+	@include interval-600 {
+		height: auto;
+		padding-bottom: 60px;
+	}
+	h3 {
+		line-height: 1.4em;
+		span {
+			border-bottom: solid 1px transparent;
+		}
+	}
+	a {
+		color: $red;
+		.dotted {
+			position: relative;
+			&:before {
+				content: "";
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				margin: -22.5px 0 0 -10px;
+				width: 0;
+				height: 0;
+				border-style: solid;
+				border-width: 22.5px 0 22.5px 30px;
+				border-color: transparent transparent transparent #ffffff;
+			}
+		}
+		&:hover {
+			text-decoration: none;
+			.dotted {
+				border-color: $red;
+				&:before {
+					border-color: transparent transparent transparent $red;
+				}
+			}
+			h3 {
+				text-decoration: none;
+				span {
+					border-bottom: solid 1px;
+				}
+			}
+		}
+	}
+	h3 {
+		font-size: 16px;
+	}
+}
+
+.photo-item {
+	display: inline-block;
+	vertical-align: top;
+	height: 300px;
+	@include interval-600 {
+		height: auto;
+		padding-bottom: 60px;
+	}
+	h3 {
+		line-height: 1.4em;
+		span {
+			border-bottom: solid 1px transparent;
+		}
+	}
+	a {
+		color: $red;
+		&:hover {
+			text-decoration: none;
+			.dotted {
+				border-color: $red;
+			}
+			h3 {
+				text-decoration: none;
+				span {
+					border-bottom: solid 1px;
+				}
+			}
+		}
+	}
+	h3 {
+		font-size: 16px;
+	}
+}
 
 
+.watch-photo {
+	background: url(../_img/clouds_photo.png) no-repeat 170px top;
+	padding-top: 20px;
+}
 
+.photo-carousel {
+	background: #465a7b url(../_img/jeans.jpg);
+	padding: 25px 110px 50px;
+	margin-bottom: 40px;
+	position: relative;
+	@include ipad {
+		padding-left: 100px;
+		padding-right: 100px;
+	}
+	@include iphone {
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+	&:before {
+		content: "";
+		position: absolute;
+		left: 240px;
+		bottom: 100%;
+		width: 193px;
+		height: 27px;
+		background: url(../_img/decor-watch.png);
+		@include iphone {
+		   display: none;
+	    }
+	}
+	&:after {
+		content: "";
+		position: absolute;
+		right: 40px;
+		bottom: 100%;
+		width: 66px;
+		height: 57px;
+		background: url(../_img/news-decor.png);
+		@include iphone {
+			right: 40px;
+		}
+	}
+	
+	h3 {
+		margin-top: 0;
+		margin-bottom: 40px;
+		small { 
+			color: #b6d0f5; 
+			padding-left: 10px;
+			@include iphone {
+			    display: block;
+			    padding-left: 0;
+			    padding-top: 10px;
+		    }
+		}
+		@include iphone {
+		   margin-left: -30px;
+		   margin-right: -30px;
+	    }
+	}
 
+}
 
+.photo-link {
+	display: inline-block;
+	width: 160px;
+	height: 160px;
+	overflow: hidden;
+	border-radius: 160px;
+}
 
+.jcarousel-wrapper {
+    position: relative;
+}
 
+/** Carousel **/
+
+.jcarousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.jcarousel ul {
+    width: 20000em;
+    position: relative;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.jcarousel li {
+    width: 160px;
+    float: left;
+    text-align: center;
+}
+
+.jcarousel img {
+    display: block;
+   // max-width: 100%;
+    //height: auto !important;
+}
+
+/** Carousel Controls **/
+
+.jcarousel-control-prev,
+.jcarousel-control-next {
+    position: absolute;
+    top: 50%;
+    margin-top: -26px;
+    width: 42px;
+    height: 42px;
+    text-align: center;
+    text-decoration: none;
+    background: url(../_img/big-arrows.png);
+    text-indent: 9999px;
+}
+
+.jcarousel-control-prev {
+    left: -55px;
+    background-position: left top;
+    &:hover {
+	    background-position: left -42px;
+    }
+    @include iphone {
+	    left: -40px;
+    }
+}
+
+.jcarousel-control-next {
+    right: -55px;
+    background-position: right top;
+    &:hover {
+	    background-position: right -42px;
+    }
+    @include iphone {
+	    right: -40px;
+    }
+}
+
+/** Carousel Pagination **/
+
+.jcarousel-pagination {
+    
+    display: none;
+}
 
 

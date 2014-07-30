@@ -307,6 +307,9 @@ body {
   .friends h2 {
     text-align: left;
     padding-left: 40px; }
+    @media only screen and (max-width: 768px) {
+      .friends h2 {
+        padding-left: 0; } }
     @media only screen and (max-width: 480px) {
       .friends h2 {
         text-align: center;
@@ -672,6 +675,8 @@ body {
   position: relative;
   right: -30px;
   top: 10px;
+  text-align: center;
+  font-weight: bold;
   	/*
   @include iphone {
   		right: 15px;
@@ -687,6 +692,9 @@ body {
   		}
   	}
   */ }
+  .all-news-link.all-videos-link {
+    padding-top: 40px;
+    right: 0px; }
   .all-news-link:hover {
     background-position: left bottom; }
   @media only screen and (max-width: 1200px) {
@@ -1132,3 +1140,223 @@ h1 {
         .tracklist li .track-time {
           width: 50px;
           font-size: 14px; } }
+
+.video-box {
+  background: white url(../_img/corner.png) repeat-x left bottom;
+  padding: 18px;
+  color: #000;
+  position: relative;
+  margin-bottom: 40px; }
+  .video-box:after {
+    content: "";
+    position: absolute;
+    left: 100%;
+    top: 30px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 15px 0 15px 15px;
+    border-color: transparent transparent transparent #ffffff; }
+    @media only screen and (max-width: 768px) {
+      .video-box:after {
+        display: none; } }
+  .video-box:before {
+    content: "";
+    position: absolute;
+    right: 18px;
+    bottom: 100%;
+    width: 432px;
+    height: 60px;
+    background: url(../_img/decor-video.png); }
+
+.video-title {
+  padding-top: 25px; }
+  @media only screen and (max-width: 768px) {
+    .video-title {
+      padding-top: 0; } }
+
+.video-item {
+  display: inline-block;
+  vertical-align: top;
+  height: 380px; }
+  @media only screen and (max-width: 600px) {
+    .video-item {
+      height: auto;
+      padding-bottom: 60px; } }
+  .video-item h3 {
+    line-height: 1.4em; }
+    .video-item h3 span {
+      border-bottom: solid 1px transparent; }
+  .video-item a {
+    color: #e5432a; }
+    .video-item a .dotted {
+      position: relative; }
+      .video-item a .dotted:before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin: -22.5px 0 0 -10px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 22.5px 0 22.5px 30px;
+        border-color: transparent transparent transparent #ffffff; }
+    .video-item a:hover {
+      text-decoration: none; }
+      .video-item a:hover .dotted {
+        border-color: #e5432a; }
+        .video-item a:hover .dotted:before {
+          border-color: transparent transparent transparent #e5432a; }
+      .video-item a:hover h3 {
+        text-decoration: none; }
+        .video-item a:hover h3 span {
+          border-bottom: solid 1px; }
+  .video-item h3 {
+    font-size: 16px; }
+
+.photo-item {
+  display: inline-block;
+  vertical-align: top;
+  height: 300px; }
+  @media only screen and (max-width: 600px) {
+    .photo-item {
+      height: auto;
+      padding-bottom: 60px; } }
+  .photo-item h3 {
+    line-height: 1.4em; }
+    .photo-item h3 span {
+      border-bottom: solid 1px transparent; }
+  .photo-item a {
+    color: #e5432a; }
+    .photo-item a:hover {
+      text-decoration: none; }
+      .photo-item a:hover .dotted {
+        border-color: #e5432a; }
+      .photo-item a:hover h3 {
+        text-decoration: none; }
+        .photo-item a:hover h3 span {
+          border-bottom: solid 1px; }
+  .photo-item h3 {
+    font-size: 16px; }
+
+.watch-photo {
+  background: url(../_img/clouds_photo.png) no-repeat 170px top;
+  padding-top: 20px; }
+
+.photo-carousel {
+  background: #465a7b url(../_img/jeans.jpg);
+  padding: 25px 110px 50px;
+  margin-bottom: 40px;
+  position: relative; }
+  @media only screen and (max-width: 768px) {
+    .photo-carousel {
+      padding-left: 100px;
+      padding-right: 100px; } }
+  @media only screen and (max-width: 480px) {
+    .photo-carousel {
+      padding-left: 50px;
+      padding-right: 50px; } }
+  .photo-carousel:before {
+    content: "";
+    position: absolute;
+    left: 240px;
+    bottom: 100%;
+    width: 193px;
+    height: 27px;
+    background: url(../_img/decor-watch.png); }
+    @media only screen and (max-width: 480px) {
+      .photo-carousel:before {
+        display: none; } }
+  .photo-carousel:after {
+    content: "";
+    position: absolute;
+    right: 40px;
+    bottom: 100%;
+    width: 66px;
+    height: 57px;
+    background: url(../_img/news-decor.png); }
+    @media only screen and (max-width: 480px) {
+      .photo-carousel:after {
+        right: 40px; } }
+  .photo-carousel h3 {
+    margin-top: 0;
+    margin-bottom: 40px; }
+    .photo-carousel h3 small {
+      color: #b6d0f5;
+      padding-left: 10px; }
+      @media only screen and (max-width: 480px) {
+        .photo-carousel h3 small {
+          display: block;
+          padding-left: 0;
+          padding-top: 10px; } }
+    @media only screen and (max-width: 480px) {
+      .photo-carousel h3 {
+        margin-left: -30px;
+        margin-right: -30px; } }
+
+.photo-link {
+  display: inline-block;
+  width: 160px;
+  height: 160px;
+  overflow: hidden;
+  border-radius: 160px; }
+
+.jcarousel-wrapper {
+  position: relative; }
+
+/** Carousel **/
+.jcarousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%; }
+
+.jcarousel ul {
+  width: 20000em;
+  position: relative;
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+.jcarousel li {
+  width: 160px;
+  float: left;
+  text-align: center; }
+
+.jcarousel img {
+  display: block; }
+
+/** Carousel Controls **/
+.jcarousel-control-prev,
+.jcarousel-control-next {
+  position: absolute;
+  top: 50%;
+  margin-top: -26px;
+  width: 42px;
+  height: 42px;
+  text-align: center;
+  text-decoration: none;
+  background: url(../_img/big-arrows.png);
+  text-indent: 9999px; }
+
+.jcarousel-control-prev {
+  left: -55px;
+  background-position: left top; }
+  .jcarousel-control-prev:hover {
+    background-position: left -42px; }
+  @media only screen and (max-width: 480px) {
+    .jcarousel-control-prev {
+      left: -40px; } }
+
+.jcarousel-control-next {
+  right: -55px;
+  background-position: right top; }
+  .jcarousel-control-next:hover {
+    background-position: right -42px; }
+  @media only screen and (max-width: 480px) {
+    .jcarousel-control-next {
+      right: -40px; } }
+
+/** Carousel Pagination **/
+.jcarousel-pagination {
+  display: none; }
