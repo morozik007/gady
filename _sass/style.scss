@@ -624,7 +624,7 @@ body {
 	padding: 40px 0 90px;
 	background: url(../_img/listen.png) no-repeat left bottom;
 	h2 {
-		margin-left: 60px;
+		margin-left: 40px;
 		margin-top: 0;
 		@include interval-991 {
 			margin-left: 0;
@@ -668,7 +668,7 @@ body {
 	}
 	h2 {
 		color: #000;
-		//padding-left: 30px;
+		padding-left: 10px;
 		@include interval-600 {
 			text-align: center;
 		}
@@ -722,7 +722,7 @@ body {
 	padding-top: 30px;
 	h2 {
 		margin-top: 0;
-		margin-left: 60px;
+		margin-left: 40px;
 		@include interval-991 {
 			margin-left: 0;
 		}

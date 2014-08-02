@@ -509,7 +509,7 @@ body {
   padding: 40px 0 90px;
   background: url(../_img/listen.png) no-repeat left bottom; }
   .listen h2 {
-    margin-left: 60px;
+    margin-left: 40px;
     margin-top: 0; }
     @media only screen and (max-width: 991px) {
       .listen h2 {
@@ -548,7 +548,8 @@ body {
       .watch:after {
         right: 20px; } }
   .watch h2 {
-    color: #000; }
+    color: #000;
+    padding-left: 10px; }
     @media only screen and (max-width: 600px) {
       .watch h2 {
         text-align: center; } }
@@ -591,7 +592,7 @@ body {
   padding-top: 30px; }
   .index-news h2 {
     margin-top: 0;
-    margin-left: 60px; }
+    margin-left: 40px; }
     @media only screen and (max-width: 991px) {
       .index-news h2 {
         margin-left: 0; } }
@@ -626,7 +627,7 @@ body {
     left: 0;
     top: 0;
     width: 100%;
-    padding: 0 0; }
+    padding: 0px 0px; }
     @media only screen and (max-width: 600px) {
       .news-item p {
         position: relative;
