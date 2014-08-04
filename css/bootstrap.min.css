@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif;
@@ -3711,9 +3710,12 @@ tbody.collapse.in {
   .breadcrumb > li {
     display: inline-block; }
     .breadcrumb > li + li:before {
-      content: "➞";
-      padding: 0 7px;
-      color: #cfc990; }
+      content: "";
+      padding: 0 7px 0 30px;
+      color: #cfc990;
+      width: 28px;
+      height: 10px;
+      background: url(../../_img/br-arrow.png) no-repeat center center; }
   .breadcrumb > .active {
     color: #777777; }
 

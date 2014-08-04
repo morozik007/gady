@@ -318,7 +318,9 @@ a.button-buy {
 	background: transparent;
 	color: #83816f;
 	font-size: 12px;
-	padding: 20px $content-padding 5px;
+	padding: 20px $content-padding 0px;
+	margin-bottom: 0;
+	
 	@include ipad {
 		padding: 20px $content-padding-mobile 5px;
 	}
@@ -331,7 +333,9 @@ a.button-buy {
 		border-bottom: solid 1px;
 	}
 }
-
+h1.heading {
+	margin-top: 18px;
+}
 .heading {
 	font-family: $hagin;
 	color: $bronze;
@@ -1609,19 +1613,29 @@ a.backlink {
 .gallery-item {
 	display: inline-block;
 	vertical-align: top;
-	width: 16.4%;
+	width: 16.3%;
 	padding: 0 15px 30px;
 	@include interval-1200 {
-		width: 19.5%;
+		width: 19.4%;
 	}
 	@include interval-600 {
-		width: 24.5%;
+		width: 24.4%;
 	}
 	@include iphone {
-		width: 49.5%;
+		width: 49.4%;
 	}
 	img {
 		width: 100%;
+	}
+	a {
+		img {
+			opacity: .7;
+		}
+		&:hover {
+			img {
+				opacity: 1;
+			}
+		}
 	}
 	
 }

@@ -14,9 +14,12 @@
     display: inline-block;
 
     + li:before {
-      content: "➞"; // Unicode space added since inline-block means non-collapsing white-space
-      padding: 0 7px;
+      content: ""; // Unicode space added since inline-block means non-collapsing white-space
+      padding: 0 7px 0 30px;
       color: #cfc990;
+      width: 28px;
+      height: 10px;
+      background: url(../../_img/br-arrow.png) no-repeat center center;
     }
   }
 

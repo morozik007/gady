@@ -261,7 +261,8 @@ a.button-buy {
   background: transparent;
   color: #83816f;
   font-size: 12px;
-  padding: 20px 18px 5px; }
+  padding: 20px 18px 0px;
+  margin-bottom: 0; }
   @media only screen and (max-width: 768px) {
     .breadcrumb {
       padding: 20px 0px 5px; } }
@@ -272,6 +273,9 @@ a.button-buy {
     color: #cfc990;
     text-decoration: none;
     border-bottom: solid 1px; }
+
+h1.heading {
+  margin-top: 18px; }
 
 .heading {
   font-family: "hagin_caps_mediumregular", serif;
@@ -1335,19 +1339,23 @@ a.backlink {
 .gallery-item {
   display: inline-block;
   vertical-align: top;
-  width: 16.4%;
+  width: 16.3%;
   padding: 0 15px 30px; }
   @media only screen and (max-width: 1200px) {
     .gallery-item {
-      width: 19.5%; } }
+      width: 19.4%; } }
   @media only screen and (max-width: 600px) {
     .gallery-item {
-      width: 24.5%; } }
+      width: 24.4%; } }
   @media only screen and (max-width: 480px) {
     .gallery-item {
-      width: 49.5%; } }
+      width: 49.4%; } }
   .gallery-item img {
     width: 100%; }
+  .gallery-item a img {
+    opacity: .7; }
+  .gallery-item a:hover img {
+    opacity: 1; }
 
 .afisha-image img {
   width: 100%; }
