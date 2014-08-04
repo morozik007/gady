@@ -44,19 +44,24 @@ a.button-buy {
     color: #fff !important;
     background: #e5432a url(../_img/btn.png); }
 
-.content.clouds {
-  position: relative; }
-  .content.clouds:before {
-    content: "";
-    position: absolute;
-    right: 0;
-    top: -15px;
-    width: 640px;
-    height: 80px;
-    background: url(../_img/content-clouds.png) no-repeat right top;
-    z-index: -1; }
-.content a {
-  color: #8fd8fb; }
+.content {
+  padding: 0 18px; }
+  @media only screen and (max-width: 768px) {
+    .content {
+      padding: 0 0px; } }
+  .content.clouds {
+    position: relative; }
+    .content.clouds:before {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: -15px;
+      width: 640px;
+      height: 80px;
+      background: url(../_img/content-clouds.png) no-repeat right top;
+      z-index: -1; }
+  .content a {
+    color: #8fd8fb; }
 
 .header {
   padding-top: 13px;
@@ -256,7 +261,10 @@ a.button-buy {
   background: transparent;
   color: #83816f;
   font-size: 12px;
-  padding: 20px 0 5px; }
+  padding: 20px 18px 5px; }
+  @media only screen and (max-width: 768px) {
+    .breadcrumb {
+      padding: 20px 0px 5px; } }
   @media only screen and (max-width: 480px) {
     .breadcrumb {
       font-size: 11px; } }
@@ -281,6 +289,8 @@ a.button-buy {
   margin-top: 35px;
   overflow: hidden;
   position: relative;
+  padding-left: 18px;
+  padding-right: 18px;
   padding-bottom: 50px; }
   @media only screen and (max-width: 768px) {
     .friends {
@@ -307,8 +317,7 @@ a.button-buy {
     z-index: 10;
     background: url(../_img/friend-decor-2.png); }
   .friends h2 {
-    text-align: left;
-    padding-left: 40px; }
+    text-align: left; }
     @media only screen and (max-width: 768px) {
       .friends h2 {
         padding-left: 0; } }
@@ -511,7 +520,7 @@ a.button-buy {
   padding: 40px 0 90px;
   background: url(../_img/listen.png) no-repeat left bottom; }
   .listen h2 {
-    margin-left: 40px;
+    margin-left: 18px;
     margin-top: 0; }
     @media only screen and (max-width: 991px) {
       .listen h2 {
@@ -534,7 +543,7 @@ a.button-buy {
   background: #d8d7d1 url(../_img/watch.png) no-repeat left bottom;
   border: none;
   margin-top: -1px;
-  padding: 20px 0 60px 30px;
+  padding: 20px 0 60px 18px;
   position: relative;
   color: #000;
   font-size: 13px; }
@@ -550,8 +559,7 @@ a.button-buy {
       .watch:after {
         right: 20px; } }
   .watch h2 {
-    color: #000;
-    padding-left: 10px; }
+    color: #000; }
     @media only screen and (max-width: 600px) {
       .watch h2 {
         text-align: center; } }
@@ -594,7 +602,7 @@ a.button-buy {
   padding-top: 30px; }
   .index-news h2 {
     margin-top: 0;
-    margin-left: 40px; }
+    margin-left: 18px; }
     @media only screen and (max-width: 991px) {
       .index-news h2 {
         margin-left: 0; } }
@@ -725,7 +733,7 @@ a.button-buy {
 .news-detail {
   background: #d8d7d1 url(../_img/corner.png) repeat-x left bottom;
   color: #4b4b4b;
-  padding: 4px 10px;
+  padding: 4px 10px 4px 3px;
   font-size: 16px;
   position: relative; }
   @media only screen and (max-width: 480px) {
@@ -833,6 +841,7 @@ h2 {
   padding-top: 20px; }
 
 a.backlink {
+  display: inline-block;
   font-size: 18px;
   color: #fff;
   border-bottom: solid 1px;
@@ -968,7 +977,9 @@ a.backlink {
     font-size: 16px; }
 
 .month {
-  padding-bottom: 46px; }
+  padding-bottom: 46px;
+  margin-left: -18px;
+  margin-right: -18px; }
   .month.past {
     opacity: .3; }
     .month.past .buy {
@@ -989,12 +1000,12 @@ a.backlink {
   .month h3 {
     margin: 0;
     background: url(../_img/sew.png) repeat-x left bottom;
-    padding: 15px 10px;
+    padding: 15px 18px;
     font-size: 26px;
     font-weight: 200; }
   .month .month-item {
     background: url(../_img/sew.png) repeat-x left bottom;
-    padding: 18px 15px; }
+    padding: 18px 18px; }
   .month small {
     display: block;
     font-size: 11px;
@@ -1326,8 +1337,20 @@ a.backlink {
   vertical-align: top;
   width: 16.4%;
   padding: 0 15px 30px; }
+  @media only screen and (max-width: 1200px) {
+    .gallery-item {
+      width: 19.5%; } }
+  @media only screen and (max-width: 600px) {
+    .gallery-item {
+      width: 24.5%; } }
+  @media only screen and (max-width: 480px) {
+    .gallery-item {
+      width: 49.5%; } }
   .gallery-item img {
     width: 100%; }
+
+.afisha-image img {
+  width: 100%; }
 
 /** Carousel **/
 .jcarousel {

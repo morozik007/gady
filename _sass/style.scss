@@ -45,7 +45,8 @@
 $red: #e5432a;
 $bronze: #cfc990;
 $hagin: 'hagin_caps_mediumregular', serif;
-
+$content-padding: 18px;
+$content-padding-mobile: 0px;
 
 body {
 	background: #000 url(../_img/bg.png) repeat-x left bottom;
@@ -92,6 +93,10 @@ a.button-buy {
 	}
 }
 .content {
+	padding: 0 $content-padding;
+	@include ipad {
+		padding: 0 $content-padding-mobile;
+	}
 	&.clouds {
 		position: relative;
 		&:before {
@@ -313,7 +318,10 @@ a.button-buy {
 	background: transparent;
 	color: #83816f;
 	font-size: 12px;
-	padding: 20px 0 5px;
+	padding: 20px $content-padding 5px;
+	@include ipad {
+		padding: 20px $content-padding-mobile 5px;
+	}
 	@include iphone {
 		font-size: 11px;
 	}
@@ -343,6 +351,8 @@ a.button-buy {
 	margin-top: 35px;
 	overflow: hidden;
 	position: relative;
+	padding-left: $content-padding;
+	padding-right: $content-padding;
 	padding-bottom: 50px;
 	@include ipad {
 		background-position: right 20px;
@@ -372,7 +382,7 @@ a.button-buy {
 	}
 	h2 {
 		text-align: left;
-		padding-left: 40px;
+		//padding-left: $content-padding;
 		@include ipad {
 			padding-left: 0;
 		}
@@ -627,7 +637,7 @@ a.button-buy {
 	padding: 40px 0 90px;
 	background: url(../_img/listen.png) no-repeat left bottom;
 	h2 {
-		margin-left: 40px;
+		margin-left: $content-padding;
 		margin-top: 0;
 		@include interval-991 {
 			margin-left: 0;
@@ -653,7 +663,7 @@ a.button-buy {
 	background: #d8d7d1 url(../_img/watch.png) no-repeat left bottom;
 	border: none;
 	margin-top: -1px;
-	padding: 20px 0 60px 30px;
+	padding: 20px 0 60px $content-padding;
 	position: relative;
 	color: #000;
 	font-size: 13px;
@@ -671,7 +681,7 @@ a.button-buy {
 	}
 	h2 {
 		color: #000;
-		padding-left: 10px;
+		//padding-left: 10px;
 		@include interval-600 {
 			text-align: center;
 		}
@@ -725,7 +735,7 @@ a.button-buy {
 	padding-top: 30px;
 	h2 {
 		margin-top: 0;
-		margin-left: 40px;
+		margin-left: $content-padding;
 		@include interval-991 {
 			margin-left: 0;
 		}
@@ -875,7 +885,7 @@ a.button-buy {
 .news-detail {
 	background: #d8d7d1 url(../_img/corner.png) repeat-x left bottom;
 	color: #4b4b4b;
-	padding: 4px 10px;
+	padding: 4px 10px 4px 3px;
 	font-size: 16px;
 	position: relative;
 	@include iphone {
@@ -1168,6 +1178,8 @@ a.backlink {
 
 .month {
 	padding-bottom: 46px;
+	margin-left: -$content-padding;
+	margin-right: -$content-padding;
 	&.past {
 		opacity: .3;
 		.buy {
@@ -1197,13 +1209,13 @@ a.backlink {
 	h3 {
 		margin: 0;
 		background: url(../_img/sew.png) repeat-x left bottom;
-		padding: 15px 10px;
+		padding: 15px $content-padding;
 		font-size: 26px;
 		font-weight: 200;
 	}
 	.month-item {
 		background: url(../_img/sew.png) repeat-x left bottom;
-		padding: 18px 15px;
+		padding: 18px $content-padding;
 	}
 	small {
 		display: block;
@@ -1590,7 +1602,6 @@ a.backlink {
     position: relative;
 }
 .gallery-title {
-	padding-right: 
 }
 .gallery-list {
 	padding-top: 30px;
@@ -1600,11 +1611,26 @@ a.backlink {
 	vertical-align: top;
 	width: 16.4%;
 	padding: 0 15px 30px;
+	@include interval-1200 {
+		width: 19.5%;
+	}
+	@include interval-600 {
+		width: 24.5%;
+	}
+	@include iphone {
+		width: 49.5%;
+	}
+	img {
+		width: 100%;
+	}
+	
+}
+
+.afisha-image {
 	img {
 		width: 100%;
 	}
 }
-
 
 
 
