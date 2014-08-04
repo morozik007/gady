@@ -10,7 +10,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   color: #fff; }
 
-.btn-default {
+a.btn-default {
   background: #e5432a url(../_img/btn.png) repeat-x left top;
   border: none;
   border-radius: 0;
@@ -18,30 +18,30 @@ body {
   font-size: 16px;
   font-weight: bold;
   padding: 8px 24px; }
-  .btn-default:hover {
+  a.btn-default:hover {
     color: #fff; }
 
-.button-thanks {
+a.button-thanks {
   font-family: "hagin_caps_mediumregular", serif;
-  color: #fff;
+  color: #fff !important;
   background: #437826 url(../_img/btn-thank.png);
   border: none;
   border-radius: 0;
   font-size: 24px;
   padding-left: 30px;
   padding-right: 30px; }
-  .button-thanks:hover {
-    color: inherit; }
+  a.button-thanks:hover {
+    color: inherit !important; }
 
-.button-buy {
+a.button-buy {
   font-family: "hagin_caps_mediumregular", serif;
-  color: #000;
+  color: #000 !important;
   font-size: 24px;
   padding: 5px 25px;
   background: #d39d26 url(../_img/btn-buy.png);
   margin: 13px 0 7px; }
-  .button-buy:hover {
-    color: #fff;
+  a.button-buy:hover {
+    color: #fff !important;
     background: #e5432a url(../_img/btn.png); }
 
 .content.clouds {
@@ -55,6 +55,8 @@ body {
     height: 80px;
     background: url(../_img/content-clouds.png) no-repeat right top;
     z-index: -1; }
+.content a {
+  color: #8fd8fb; }
 
 .header {
   padding-top: 13px;
@@ -272,7 +274,7 @@ body {
   text-transform: uppercase; }
   .heading span {
     background: url(../_img/heading_line.png) no-repeat center bottom;
-    padding: 0 8px 5px; }
+    padding: 0 0px 5px; }
 
 .friends {
   background: url(../_img/clouds_friends.png) no-repeat 190px 20px;
@@ -792,6 +794,13 @@ h1 {
     h1 {
       font-size: 28px; } }
 
+h2 {
+  color: #e5432a;
+  margin-top: 0; }
+  @media only screen and (max-width: 600px) {
+    h2 {
+      font-size: 28px; } }
+
 .main-content {
   padding-bottom: 50px; }
   @media only screen and (max-width: 600px) {
@@ -823,16 +832,16 @@ h1 {
 .back {
   padding-top: 20px; }
 
-.backlink {
+a.backlink {
   font-size: 18px;
   color: #fff;
   border-bottom: solid 1px;
   text-decoration: none !important;
   position: relative; }
   @media only screen and (max-width: 600px) {
-    .backlink {
+    a.backlink {
       margin-left: 28px; } }
-  .backlink:before {
+  a.backlink:before {
     content: "";
     width: 28px;
     height: 100%;
@@ -840,9 +849,9 @@ h1 {
     left: -23px;
     top: 0;
     background: url(../_img/back.png) no-repeat left 1px; }
-  .backlink:hover {
+  a.backlink:hover {
     color: #e5432a; }
-    .backlink:hover:before {
+    a.backlink:hover:before {
       background-position: left -26px; }
 
 .thumbnails {
@@ -1308,6 +1317,17 @@ h1 {
 
 .jcarousel-wrapper {
   position: relative; }
+
+.gallery-list {
+  padding-top: 30px; }
+
+.gallery-item {
+  display: inline-block;
+  vertical-align: top;
+  width: 16.4%;
+  padding: 0 15px 30px; }
+  .gallery-item img {
+    width: 100%; }
 
 /** Carousel **/
 .jcarousel {
