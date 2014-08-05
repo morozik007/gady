@@ -49,9 +49,37 @@ $content-padding: 18px;
 $content-padding-mobile: 0px;
 
 body {
-	background: #000 url(../_img/bg.png) repeat-x left bottom;
+	background: #000;
 	font-family: 'Open Sans', sans-serif;
 	color: #fff;
+}
+.pattern {
+	background: url(../_img/pattern.png);
+	position: relative;
+	&:before {
+		content: "";
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 284px;
+		background: url(../_img/t-grad.png) repeat-x left top;
+		z-index: 1;
+	}
+	&:after {
+		content: "";
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		height: 1091px;
+		z-index: -1;
+		background: url(../_img/b-grad.jpg) repeat-x left bottom;
+	}
+}
+.container {
+	position: relative;
+	z-index: 5;
 }
 
 a.btn-default {
@@ -118,7 +146,7 @@ a.button-buy {
 .header {
 	padding-top: 13px;
 	padding-bottom: 13px;
-	background: #000;
+	//background: #000;
 	.logo {
 		display: block;
 		text-align: center;

@@ -6,9 +6,35 @@
   font-weight: normal;
   font-style: normal; }
 body {
-  background: black url(../_img/bg.png) repeat-x left bottom;
+  background: #000;
   font-family: 'Open Sans', sans-serif;
   color: #fff; }
+
+.pattern {
+  background: url(../_img/pattern.png);
+  position: relative; }
+  .pattern:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 284px;
+    background: url(../_img/t-grad.png) repeat-x left top;
+    z-index: 1; }
+  .pattern:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1091px;
+    z-index: -1;
+    background: url(../_img/b-grad.jpg) repeat-x left bottom; }
+
+.container {
+  position: relative;
+  z-index: 5; }
 
 a.btn-default {
   background: #e5432a url(../_img/btn.png) repeat-x left top;
@@ -65,8 +91,7 @@ a.button-buy {
 
 .header {
   padding-top: 13px;
-  padding-bottom: 13px;
-  background: #000; }
+  padding-bottom: 13px; }
   .header .logo {
     display: block;
     text-align: center;
