@@ -70,6 +70,19 @@ a.button-buy {
     color: #fff !important;
     background: #e5432a url(../_img/btn.png); }
 
+.button-send {
+  font-family: "hagin_caps_mediumregular", serif;
+  color: #fff !important;
+  font-size: 24px;
+  width: 152px;
+  font-weight: normal;
+  height: 48px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 0;
+  background: #d39d26 url(../_img/btn-send.png);
+  margin-top: 5px; }
+
 .content {
   padding: 0 18px; }
   @media only screen and (max-width: 768px) {
@@ -1037,7 +1050,7 @@ a.backlink {
     padding: 18px 18px; }
   .month small {
     display: block;
-    font-size: 11px;
+    font-size: 13px;
     line-height: 1.3em; }
   .month .day {
     font-weight: bold;
@@ -1384,6 +1397,91 @@ a.backlink {
 
 .afisha-image img {
   width: 100%; }
+
+.contacts-info {
+  line-height: 1.7em; }
+  .contacts-info h1 {
+    margin-bottom: 60px; }
+  .contacts-info h5 {
+    color: #cfc990;
+    margin-bottom: 10px;
+    margin-top: 0; }
+  .contacts-info h2 {
+    color: #fff;
+    font-size: 22px;
+    line-height: 1em;
+    margin-bottom: 8px; }
+  .contacts-info a {
+    color: #fff; }
+  .contacts-info .contact-social {
+    padding-top: 50px; }
+    @media only screen and (max-width: 600px) {
+      .contacts-info .contact-social {
+        padding-top: 0; } }
+  @media only screen and (max-width: 600px) {
+    .contacts-info .col-sm-6 {
+      padding-bottom: 20px; } }
+
+.contact-social-list a {
+  display: inline-block;
+  font-size: 18px;
+  text-decoration: none;
+  padding-left: 31px;
+  position: relative;
+  margin: 0 30px 10px 0; }
+  .contact-social-list a span {
+    border-bottom: solid 1px; }
+  .contact-social-list a:hover {
+    color: #e5432a; }
+  .contact-social-list a:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 23px;
+    height: 23px;
+    background: url(../_img/social-top.png) no-repeat left top; }
+  .contact-social-list a.soc-fb:before {
+    background-position: -31px 0; }
+  .contact-social-list a.soc-tw:before {
+    background-position: -62px 0; }
+  .contact-social-list a.soc-vk:before {
+    background-position: 0px 0; }
+  .contact-social-list a.soc-yt:before {
+    background-position: -95px 0; }
+  .contact-social-list a.soc-sc:before {
+    background-position: -126px 0; }
+
+.feedback {
+  padding-top: 30px;
+  padding-bottom: 70px; }
+  .feedback h2 {
+    font-size: 30px; }
+  .feedback .contact-form {
+    background: url(../_img/form-pattern.jpg);
+    padding: 20px;
+    padding-right: 80px; }
+    @media only screen and (max-width: 1200px) {
+      .feedback .contact-form {
+        padding-right: 20px; } }
+    .feedback .contact-form label {
+      color: #000;
+      font-family: "hagin_caps_mediumregular", serif;
+      font-size: 18px;
+      text-transform: uppercase; }
+    .feedback .contact-form .form-control {
+      border-radius: 0;
+      background: #ece8bd;
+      border: solid 1px #8f8787;
+      padding: 10px 12px;
+      height: auto;
+      font-size: 16px; }
+    .feedback .contact-form textarea {
+      resize: vertical; }
+    .feedback .contact-form .captcha {
+      float: left;
+      padding-left: 15px;
+      padding-right: 5px; }
 
 /** Carousel **/
 .jcarousel {

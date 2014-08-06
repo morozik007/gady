@@ -120,6 +120,22 @@ a.button-buy {
 		background: $red url(../_img/btn.png);
 	}
 }
+
+
+.button-send {
+	font-family: $hagin;
+	color: #fff !important;
+	font-size: 24px;
+	width: 152px;
+	font-weight: normal;
+	height: 48px;
+	text-transform: uppercase;
+	border: none;
+	border-radius: 0;
+	background: #d39d26 url(../_img/btn-send.png);
+	margin-top: 5px;
+}
+
 .content {
 	padding: 0 $content-padding;
 	@include ipad {
@@ -1673,6 +1689,134 @@ a.backlink {
 		width: 100%;
 	}
 }
+
+.contacts-info {
+	line-height: 1.7em;
+	h1 {
+		margin-bottom: 60px;
+	}
+	h5 {
+		color: $bronze;
+		margin-bottom: 10px;
+		margin-top: 0;
+	}
+	h2 {
+		color: #fff;
+		font-size: 22px;
+		line-height: 1em;
+		margin-bottom: 8px;
+	}
+	a {
+		color: #fff;
+	}
+	.contact-social {
+		padding-top: 50px;
+		@include interval-600 {
+			padding-top: 0;
+		}
+	}
+	.col-sm-6 {
+		@include interval-600 {
+			padding-bottom: 20px;
+		}
+	}
+}
+
+.contact-social-list {
+	a {
+		display: inline-block;
+		font-size: 18px;
+		text-decoration: none;
+		padding-left: 31px;
+		position: relative;
+		margin: 0 30px 10px 0;
+		span {
+			border-bottom: solid 1px;
+		}
+		&:hover {
+			color: $red;
+		}
+		&:before {
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 23px;
+			height: 23px;
+			background: url(../_img/social-top.png) no-repeat left top;
+		}
+		&.soc-fb {
+			&:before {
+				background-position: -31px 0;
+			}
+		}
+		&.soc-tw {
+			&:before {
+				background-position: -62px 0;
+			}
+		}
+		&.soc-vk {
+			&:before {
+				background-position: 0px 0;
+			}
+		}
+		&.soc-yt {
+			&:before {
+				background-position: -95px 0;
+			}
+		}
+		&.soc-sc {
+			&:before {
+				background-position: -126px 0;
+			}
+		}
+	}
+}
+
+.feedback {
+	padding-top: 30px;
+	padding-bottom: 70px;
+	h2 {
+		font-size: 30px;
+	}
+	.contact-form {
+		background: url(../_img/form-pattern.jpg);
+		padding: 20px;
+		padding-right: 80px;
+		@include interval-1200 {
+			padding-right: 20px;
+		}
+		label {
+			color: #000;
+			font-family: $hagin;
+			font-size: 18px;
+			text-transform: uppercase;
+		}
+		.form-control {
+			border-radius: 0;
+			background: #ece8bd;
+			border: solid 1px #8f8787;
+			padding: 10px 12px;
+			height: auto;
+			font-size: 16px;
+		}
+		textarea {
+			resize: vertical;
+		}
+		.captcha {
+			float: left;
+			padding-left: 15px;
+			padding-right: 5px;
+		}
+	}
+}
+
+
+
+
+
+
+
 
 
 
