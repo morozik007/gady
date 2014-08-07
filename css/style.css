@@ -1112,7 +1112,7 @@ a.backlink {
         text-decoration: none; }
 
 .past-releases {
-  padding: 10px;
+  padding: 10px 0 0;
   position: relative; }
   .past-releases:before {
     content: "";
