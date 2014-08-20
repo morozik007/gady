@@ -62,19 +62,26 @@ body {
 		left: 0;
 		top: 0;
 		width: 100%;
-		height: 284px;
-		background: url(../_img/t-grad.png) repeat-x left top;
-		z-index: 1;
+		height: 100%;
+		background: url(../_img/b-grad.jpg) repeat-x left top;
+		//background: url(../_img/t-grad.png) repeat-x left top;
+		z-index: -1;
 	}
 	&:after {
 		content: "";
 		position: absolute;
 		left: 0;
-		bottom: 0;
+		top: 0;
 		width: 100%;
-		height: 1091px;
-		z-index: -1;
-		background: url(../_img/b-grad.jpg) repeat-x left bottom;
+		height: 80px;
+		z-index: 1;
+		background: #000;
+		@include interval-1200 {
+			height: 160px;
+		}
+		@include iphone {
+			height: 270px;
+		}
 	}
 }
 .container {
@@ -96,14 +103,14 @@ a.btn-default {
 }
 
 a.button-thanks {
-	font-family: $hagin;
 	color: #fff !important;
 	background: #437826 url(../_img/btn-thank.png);
 	border: none;
 	border-radius: 0;
-	font-size: 24px;
+	font-size: 15px;
 	padding-left: 30px;
 	padding-right: 30px;
+	font-weight: normal;
 	&:hover {
 		color: inherit !important;
 	}
@@ -159,36 +166,46 @@ a.button-buy {
 		color: #8fd8fb;
 	}
 }
-.header {
+.header, .footer {
 	padding-top: 13px;
 	padding-bottom: 13px;
+	margin-bottom: 28px;
 	//background: #000;
 	.logo {
 		display: block;
-		text-align: center;
+		text-align: left;
+		padding-left: 20px;
 		padding-top: 10px;
-		@include ipad { padding-bottom: 10px;}
+		@include interval-1200 {
+			width: 100%;
+			text-align: center;
+		}
+		@include ipad { 
+			//padding-bottom: 10px;
+		}
 		img {
 			@include ipad-h { max-width: 90%;}
 		}
 		
 	}
 	.button-thanks {
-		font-size: 19px;
-		padding: 3px 10px;
-		margin-left: -40px;
-		margin-top: 10px;
-		
-		@include ipad-h { margin-left: -50px;}
-		@include interval-991 { margin-left: -5px;}
+		font-size: 15px;
+		padding: 3px 15px;
+		height: auto;
+		margin-left: -30px;
+		margin-top: -3px;
+		@include interval-1200 { margin-left: 0px;}
 		@include ipad { margin-left: 0px;}
-		@include iphone { margin-left: 0px;}
+		@include iphone { width: 100%; margin-bottom: 15px; }
 	}
 	.social-top {
 		text-align: right;
 		padding-top: 15px;
 		white-space: nowrap;
 		position: relative;
+		@include ipad-h {
+			text-align: center;
+		}
 		a {
 			display: inline-block;
 			overflow: hidden;
@@ -206,14 +223,21 @@ a.button-buy {
 		@include iphone {
 			text-align: left;
 			padding-top: 15px;
-			left: -20px;
+			left: 0px;
 		}
 	}
 }
 
 .main-nav {
-	padding-top: 2px;
+	padding-top: 14px;
 	white-space: nowrap;
+	@include interval-1200  {
+		text-align: center;
+	}
+	@include iphone {
+		white-space: normal;
+		text-align: left;
+	}
 	.nav-column {
 		display: inline-block;
 		@include iphone {
@@ -221,27 +245,15 @@ a.button-buy {
 		}
 	}
 	a {
-		display: block;
+		display: inline-block;
 		color: #fff;
 		text-decoration: none;
 		height: 23px;
-		padding-left: 34px;
-		padding-right: 30px;
 		position: relative;
 		margin-bottom: 3px;
 		line-height: 23px;
-		font-size: 16px;
-		//width: 140px;
-		&::before {
-			content: "";
-			position: absolute;
-			left: 10px;
-			top: 4px;
-			width: 20px;
-			height: 17px;
-			background: url(../_img/star.png);
-			opacity: .6;
-		}
+		font-size: 15px;
+		margin: 0 7px;
 		&:hover {
 			color: #c2171a;
 			&:before {
@@ -250,21 +262,19 @@ a.button-buy {
 		}
 		@include iphone {
 			display: inline-block;
-			width: 49%;
+			width: 40%;
 		}
 	}
 	.nav-current {
-		display: block;
-		color: #fff;
+		display: inline-block;
+		color: $red;
 		text-decoration: none;
 		height: 23px;
-		padding-left: 34px;
-		padding-right: 30px;
 		position: relative;
 		margin-bottom: 3px;
 		line-height: 23px;
-		font-size: 16px;
-		background: url(../_img/m-current.png) no-repeat left top;
+		font-size: 15px;
+		margin: 0 7px;
 		@include iphone {
 			display: inline-block;
 			width: 49%;
@@ -273,89 +283,7 @@ a.button-buy {
 }
 
 .footer {
-	background: url(../_img/footer.png) no-repeat center top;
-	padding-top: 26px;
-	padding-bottom: 95px;
-	@include ipad {
-		padding-bottom: 40px;
-	}
-	@include iphone {
-		padding-top: 15px;
-		padding-bottom: 10px;
-	}
-	.logo-bottom {
-		padding-left: 60px;
-		img {
-			max-width: 100%;
-		}
-		@include ipad {
-			text-align: center;
-			padding-left: 0;
-		}
-		@include iphone {
-			img {
-				max-width: 60%;
-			}
-		}
-	}
-	.nav-bottom {
-		padding: 7px 0;
-		text-align: center;
-		@include ipad {
-			text-align: center;
-			padding-top: 0;
-			padding-right: 10px;
-		} 
-		@include iphone {
-			padding: 7px 0;
-		}
-		a {
-			color: #fff;
-			text-decoration: none;
-			margin: 0 8px;
-			@include ipad {
-				margin: 0 10px;
-			} 
-			&:hover {
-				text-decoration: underline;
-			}
-		}
-	}
-	.social-bottom {
-		text-align: right;
-		padding: 2px 15px;
-		white-space: nowrap;
-		position: relative;
-		left: -30px;
-		@include ipad-h {
-			text-align: left;
-			padding: 0px;
-			position: relative;
-			left: -20px;
-		}
-		@include ipad {
-			text-align: center;
-			padding: 10px;
-			left: 0;
-		}
-		@include iphone {
-			top: -10px;
-		}
-		a {
-			display: inline-block;
-			width: 23px;
-			height: 23px;
-			background: url(../_img/social-bottom.png);
-			text-indent: 9999px;
-			margin: 3px;
-			overflow: hidden;
-			&.sb-vk { background-position: 0 0;}
-			&.sb-fb { background-position: -31px 0;}
-			&.sb-tw { background-position: -63px 0;}
-			&.sb-yt { background-position: -95px 0;}
-			&.sb-sc	 { background-position: -127px 0;}
-		}
-	}
+
 }
 
 .breadcrumb {
@@ -395,8 +323,7 @@ h1.heading {
 
 
 .friends {
-	background: url(../_img/clouds_friends.png) no-repeat 190px 20px;
-	margin-top: 35px;
+	//margin-top: 35px;
 	overflow: hidden;
 	position: relative;
 	padding-left: $content-padding;
@@ -408,6 +335,7 @@ h1.heading {
 	@include iphone {
 		background: none;
 	}
+/*
 	&:before {
 		content: "";
 		position: absolute;
@@ -428,8 +356,10 @@ h1.heading {
 		z-index: 10;
 		background: url(../_img/friend-decor-2.png);
 	}
+*/
 	h2 {
 		text-align: left;
+		margin-top: 50px;
 		//padding-left: $content-padding;
 		@include ipad {
 			padding-left: 0;
@@ -451,10 +381,11 @@ h1.heading {
 	}
 	.friends-thank {
 		overflow: hidden;
-		background: url(../_img/thank_decor.png) repeat-x left bottom;
+		text-align: right;
+		height: 147px;
+		line-height: 143px;
 		@include interval-991 {
-			width: 400px;
-			margin: 0 auto 30px;
+			text-align: center;
 		}
 		@include iphone {
 			width: 100%;
@@ -464,7 +395,7 @@ h1.heading {
 		position: relative;
 		float: left;
 		width: 75%;
-		padding-right: 30px;
+		padding-right: 0px;
 		@include interval-991 {
 			float: none;
 			width: 100%;
@@ -683,7 +614,6 @@ h1.heading {
 
 .listen {
 	padding: 40px 0 90px;
-	background: url(../_img/listen.png) no-repeat left bottom;
 	h2 {
 		margin-left: $content-padding;
 		margin-top: 0;
@@ -695,7 +625,7 @@ h1.heading {
 		}
 	}
 	.embed {
-		padding-right: 90px;
+		//padding-right: 90px;
 		padding-left: 10px;
 		@include interval-991 {
 			padding-right: 0;
@@ -708,14 +638,14 @@ h1.heading {
 }
 
 .watch {
-	background: #d8d7d1 url(../_img/watch.png) no-repeat left bottom;
 	border: none;
 	margin-top: -1px;
-	padding: 20px 0 60px $content-padding;
+	padding: 0px 0 0px $content-padding;
 	position: relative;
-	color: #000;
+	color: $red;
 	font-size: 13px;
-	&:after {
+	/*
+&:after {
 		content: "";
 		position: absolute;
 		right: 190px;
@@ -727,8 +657,8 @@ h1.heading {
 			right: 20px;
 		}
 	}
+*/
 	h2 {
-		color: #000;
 		//padding-left: 10px;
 		@include interval-600 {
 			text-align: center;
@@ -744,6 +674,9 @@ h1.heading {
 		p {
 			text-align: left;
 		}
+	}
+	.all-news {
+		padding-top: 0;
 	}
 	@include ipad {
 		padding-top: 10px;
@@ -792,7 +725,7 @@ h1.heading {
 		}
 	}
 	> .row {
-		background: url(../_img/news-clouds.png) no-repeat 60px bottom;
+		//background: url(../_img/news-clouds.png) no-repeat 60px bottom;
 	}
 }
 .news-item {

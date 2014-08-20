@@ -19,18 +19,24 @@ body {
     left: 0;
     top: 0;
     width: 100%;
-    height: 284px;
-    background: url(../_img/t-grad.png) repeat-x left top;
-    z-index: 1; }
+    height: 100%;
+    background: url(../_img/b-grad.jpg) repeat-x left top;
+    z-index: -1; }
   .pattern:after {
     content: "";
     position: absolute;
     left: 0;
-    bottom: 0;
+    top: 0;
     width: 100%;
-    height: 1091px;
-    z-index: -1;
-    background: url(../_img/b-grad.jpg) repeat-x left bottom; }
+    height: 80px;
+    z-index: 1;
+    background: #000; }
+    @media only screen and (max-width: 1200px) {
+      .pattern:after {
+        height: 160px; } }
+    @media only screen and (max-width: 480px) {
+      .pattern:after {
+        height: 270px; } }
 
 .container {
   position: relative;
@@ -48,14 +54,14 @@ a.btn-default {
     color: #fff; }
 
 a.button-thanks {
-  font-family: "hagin_caps_mediumregular", serif;
   color: #fff !important;
   background: #437826 url(../_img/btn-thank.png);
   border: none;
   border-radius: 0;
-  font-size: 24px;
+  font-size: 15px;
   padding-left: 30px;
-  padding-right: 30px; }
+  padding-right: 30px;
+  font-weight: normal; }
   a.button-thanks:hover {
     color: inherit !important; }
 
@@ -102,42 +108,47 @@ a.button-buy {
   .content a {
     color: #8fd8fb; }
 
-.header {
+.header, .footer {
   padding-top: 13px;
-  padding-bottom: 13px; }
-  .header .logo {
+  padding-bottom: 13px;
+  margin-bottom: 28px; }
+  .header .logo, .footer .logo {
     display: block;
-    text-align: center;
+    text-align: left;
+    padding-left: 20px;
     padding-top: 10px; }
-    @media only screen and (max-width: 768px) {
-      .header .logo {
-        padding-bottom: 10px; } }
+    @media only screen and (max-width: 1200px) {
+      .header .logo, .footer .logo {
+        width: 100%;
+        text-align: center; } }
     @media only screen and (max-width: 1024px) {
-      .header .logo img {
+      .header .logo img, .footer .logo img {
         max-width: 90%; } }
-  .header .button-thanks {
-    font-size: 19px;
-    padding: 3px 10px;
-    margin-left: -40px;
-    margin-top: 10px; }
-    @media only screen and (max-width: 1024px) {
-      .header .button-thanks {
-        margin-left: -50px; } }
-    @media only screen and (max-width: 991px) {
-      .header .button-thanks {
-        margin-left: -5px; } }
+  .header .button-thanks, .footer .button-thanks {
+    font-size: 15px;
+    padding: 3px 15px;
+    height: auto;
+    margin-left: -30px;
+    margin-top: -3px; }
+    @media only screen and (max-width: 1200px) {
+      .header .button-thanks, .footer .button-thanks {
+        margin-left: 0px; } }
     @media only screen and (max-width: 768px) {
-      .header .button-thanks {
+      .header .button-thanks, .footer .button-thanks {
         margin-left: 0px; } }
     @media only screen and (max-width: 480px) {
-      .header .button-thanks {
-        margin-left: 0px; } }
-  .header .social-top {
+      .header .button-thanks, .footer .button-thanks {
+        width: 100%;
+        margin-bottom: 15px; } }
+  .header .social-top, .footer .social-top {
     text-align: right;
     padding-top: 15px;
     white-space: nowrap;
     position: relative; }
-    .header .social-top a {
+    @media only screen and (max-width: 1024px) {
+      .header .social-top, .footer .social-top {
+        text-align: center; } }
+    .header .social-top a, .footer .social-top a {
       display: inline-block;
       overflow: hidden;
       text-indent: 9999px;
@@ -145,50 +156,47 @@ a.button-buy {
       height: 23px;
       margin: 0 2px;
       background: url(../_img/social-top.png); }
-      .header .social-top a.st-vk {
+      .header .social-top a.st-vk, .footer .social-top a.st-vk {
         background-position: 0 0; }
-      .header .social-top a.st-fb {
+      .header .social-top a.st-fb, .footer .social-top a.st-fb {
         background-position: -32px 0; }
-      .header .social-top a.st-tw {
+      .header .social-top a.st-tw, .footer .social-top a.st-tw {
         background-position: -63px 0; }
-      .header .social-top a.st-yt {
+      .header .social-top a.st-yt, .footer .social-top a.st-yt {
         background-position: -95px 0; }
-      .header .social-top a.st-sc {
+      .header .social-top a.st-sc, .footer .social-top a.st-sc {
         background-position: -126px 0; }
     @media only screen and (max-width: 480px) {
-      .header .social-top {
+      .header .social-top, .footer .social-top {
         text-align: left;
         padding-top: 15px;
-        left: -20px; } }
+        left: 0px; } }
 
 .main-nav {
-  padding-top: 2px;
+  padding-top: 14px;
   white-space: nowrap; }
+  @media only screen and (max-width: 1200px) {
+    .main-nav {
+      text-align: center; } }
+  @media only screen and (max-width: 480px) {
+    .main-nav {
+      white-space: normal;
+      text-align: left; } }
   .main-nav .nav-column {
     display: inline-block; }
     @media only screen and (max-width: 480px) {
       .main-nav .nav-column {
         display: block; } }
   .main-nav a {
-    display: block;
+    display: inline-block;
     color: #fff;
     text-decoration: none;
     height: 23px;
-    padding-left: 34px;
-    padding-right: 30px;
     position: relative;
     margin-bottom: 3px;
     line-height: 23px;
-    font-size: 16px; }
-    .main-nav a::before {
-      content: "";
-      position: absolute;
-      left: 10px;
-      top: 4px;
-      width: 20px;
-      height: 17px;
-      background: url(../_img/star.png);
-      opacity: .6; }
+    font-size: 15px;
+    margin: 0 7px; }
     .main-nav a:hover {
       color: #c2171a; }
       .main-nav a:hover:before {
@@ -196,104 +204,21 @@ a.button-buy {
     @media only screen and (max-width: 480px) {
       .main-nav a {
         display: inline-block;
-        width: 49%; } }
+        width: 40%; } }
   .main-nav .nav-current {
-    display: block;
-    color: #fff;
+    display: inline-block;
+    color: #e5432a;
     text-decoration: none;
     height: 23px;
-    padding-left: 34px;
-    padding-right: 30px;
     position: relative;
     margin-bottom: 3px;
     line-height: 23px;
-    font-size: 16px;
-    background: url(../_img/m-current.png) no-repeat left top; }
+    font-size: 15px;
+    margin: 0 7px; }
     @media only screen and (max-width: 480px) {
       .main-nav .nav-current {
         display: inline-block;
         width: 49%; } }
-
-.footer {
-  background: url(../_img/footer.png) no-repeat center top;
-  padding-top: 26px;
-  padding-bottom: 95px; }
-  @media only screen and (max-width: 768px) {
-    .footer {
-      padding-bottom: 40px; } }
-  @media only screen and (max-width: 480px) {
-    .footer {
-      padding-top: 15px;
-      padding-bottom: 10px; } }
-  .footer .logo-bottom {
-    padding-left: 60px; }
-    .footer .logo-bottom img {
-      max-width: 100%; }
-    @media only screen and (max-width: 768px) {
-      .footer .logo-bottom {
-        text-align: center;
-        padding-left: 0; } }
-    @media only screen and (max-width: 480px) {
-      .footer .logo-bottom img {
-        max-width: 60%; } }
-  .footer .nav-bottom {
-    padding: 7px 0;
-    text-align: center; }
-    @media only screen and (max-width: 768px) {
-      .footer .nav-bottom {
-        text-align: center;
-        padding-top: 0;
-        padding-right: 10px; } }
-    @media only screen and (max-width: 480px) {
-      .footer .nav-bottom {
-        padding: 7px 0; } }
-    .footer .nav-bottom a {
-      color: #fff;
-      text-decoration: none;
-      margin: 0 8px; }
-      @media only screen and (max-width: 768px) {
-        .footer .nav-bottom a {
-          margin: 0 10px; } }
-      .footer .nav-bottom a:hover {
-        text-decoration: underline; }
-  .footer .social-bottom {
-    text-align: right;
-    padding: 2px 15px;
-    white-space: nowrap;
-    position: relative;
-    left: -30px; }
-    @media only screen and (max-width: 1024px) {
-      .footer .social-bottom {
-        text-align: left;
-        padding: 0px;
-        position: relative;
-        left: -20px; } }
-    @media only screen and (max-width: 768px) {
-      .footer .social-bottom {
-        text-align: center;
-        padding: 10px;
-        left: 0; } }
-    @media only screen and (max-width: 480px) {
-      .footer .social-bottom {
-        top: -10px; } }
-    .footer .social-bottom a {
-      display: inline-block;
-      width: 23px;
-      height: 23px;
-      background: url(../_img/social-bottom.png);
-      text-indent: 9999px;
-      margin: 3px;
-      overflow: hidden; }
-      .footer .social-bottom a.sb-vk {
-        background-position: 0 0; }
-      .footer .social-bottom a.sb-fb {
-        background-position: -31px 0; }
-      .footer .social-bottom a.sb-tw {
-        background-position: -63px 0; }
-      .footer .social-bottom a.sb-yt {
-        background-position: -95px 0; }
-      .footer .social-bottom a.sb-sc {
-        background-position: -127px 0; }
 
 .breadcrumb {
   background: transparent;
@@ -327,39 +252,42 @@ h1.heading {
     padding: 0 0px 5px; }
 
 .friends {
-  background: url(../_img/clouds_friends.png) no-repeat 190px 20px;
-  margin-top: 35px;
   overflow: hidden;
   position: relative;
   padding-left: 18px;
   padding-right: 18px;
-  padding-bottom: 50px; }
+  padding-bottom: 50px;
+  /*
+  	&:before {
+  		content: "";
+  		position: absolute;
+  		left: 5%;
+  		bottom: -1px;
+  		width: 216px;
+  		height: 44px;
+  		z-index: 10;
+  		background: url(../_img/friend-decor-1.png);
+  	}
+  	&:after {
+  		content: "";
+  		position: absolute;
+  		right: 10px;
+  		bottom: 0px;
+  		width: 153px;
+  		height: 23px;
+  		z-index: 10;
+  		background: url(../_img/friend-decor-2.png);
+  	}
+  */ }
   @media only screen and (max-width: 768px) {
     .friends {
       background-position: right 20px; } }
   @media only screen and (max-width: 480px) {
     .friends {
       background: none; } }
-  .friends:before {
-    content: "";
-    position: absolute;
-    left: 5%;
-    bottom: -1px;
-    width: 216px;
-    height: 44px;
-    z-index: 10;
-    background: url(../_img/friend-decor-1.png); }
-  .friends:after {
-    content: "";
-    position: absolute;
-    right: 10px;
-    bottom: 0px;
-    width: 153px;
-    height: 23px;
-    z-index: 10;
-    background: url(../_img/friend-decor-2.png); }
   .friends h2 {
-    text-align: left; }
+    text-align: left;
+    margin-top: 50px; }
     @media only screen and (max-width: 768px) {
       .friends h2 {
         padding-left: 0; } }
@@ -377,11 +305,12 @@ h1.heading {
       max-width: 100%; }
   .friends .friends-thank {
     overflow: hidden;
-    background: url(../_img/thank_decor.png) repeat-x left bottom; }
+    text-align: right;
+    height: 147px;
+    line-height: 143px; }
     @media only screen and (max-width: 991px) {
       .friends .friends-thank {
-        width: 400px;
-        margin: 0 auto 30px; } }
+        text-align: center; } }
     @media only screen and (max-width: 480px) {
       .friends .friends-thank {
         width: 100%; } }
@@ -389,7 +318,7 @@ h1.heading {
     position: relative;
     float: left;
     width: 75%;
-    padding-right: 30px; }
+    padding-right: 0px; }
     @media only screen and (max-width: 991px) {
       .friends .friends-list {
         float: none;
@@ -559,8 +488,7 @@ h1.heading {
     width: 100%; }
 
 .listen {
-  padding: 40px 0 90px;
-  background: url(../_img/listen.png) no-repeat left bottom; }
+  padding: 40px 0 90px; }
   .listen h2 {
     margin-left: 18px;
     margin-top: 0; }
@@ -571,7 +499,6 @@ h1.heading {
       .listen h2 {
         text-align: center; } }
   .listen .embed {
-    padding-right: 90px;
     padding-left: 10px; }
     @media only screen and (max-width: 991px) {
       .listen .embed {
@@ -582,29 +509,29 @@ h1.heading {
         padding-left: 0; } }
 
 .watch {
-  background: #d8d7d1 url(../_img/watch.png) no-repeat left bottom;
   border: none;
   margin-top: -1px;
-  padding: 20px 0 60px 18px;
+  padding: 0px 0 0px 18px;
   position: relative;
-  color: #000;
-  font-size: 13px; }
-  .watch:after {
-    content: "";
-    position: absolute;
-    right: 190px;
-    bottom: 0;
-    width: 198px;
-    height: 27px;
-    background: url(../_img/decor-watch.png); }
-    @media only screen and (max-width: 480px) {
-      .watch:after {
-        right: 20px; } }
-  .watch h2 {
-    color: #000; }
-    @media only screen and (max-width: 600px) {
-      .watch h2 {
-        text-align: center; } }
+  color: #e5432a;
+  font-size: 13px;
+  	/*
+  &:after {
+  		content: "";
+  		position: absolute;
+  		right: 190px;
+  		bottom: 0;
+  		width: 198px;
+  		height: 27px;
+  		background: url(../_img/decor-watch.png);
+  		@include iphone {
+  			right: 20px;
+  		}
+  	}
+  */ }
+  @media only screen and (max-width: 600px) {
+    .watch h2 {
+      text-align: center; } }
   .watch .watch-item {
     text-align: center;
     padding-bottom: 20px; }
@@ -613,6 +540,8 @@ h1.heading {
       font-weight: bold; }
     .watch .watch-item p {
       text-align: left; }
+  .watch .all-news {
+    padding-top: 0; }
   @media only screen and (max-width: 768px) {
     .watch {
       padding-top: 10px; } }
@@ -651,8 +580,6 @@ h1.heading {
     @media only screen and (max-width: 600px) {
       .index-news h2 {
         text-align: center; } }
-  .index-news > .row {
-    background: url(../_img/news-clouds.png) no-repeat 60px bottom; }
 
 .news-item {
   text-align: center;
