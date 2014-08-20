@@ -116,7 +116,7 @@ a.button-buy {
     display: block;
     text-align: left;
     padding-left: 20px;
-    padding-top: 10px; }
+    padding-top: 5px; }
     @media only screen and (max-width: 1200px) {
       .header .logo, .footer .logo {
         width: 100%;
@@ -219,6 +219,17 @@ a.button-buy {
       .main-nav .nav-current {
         display: inline-block;
         width: 49%; } }
+
+.footer .logo {
+  width: 230px;
+  padding-top: 10px; }
+  @media only screen and (max-width: 1200px) {
+    .footer .logo {
+      margin: auto; } }
+  .footer .logo img {
+    width: 100%; }
+.footer .button-thanks {
+  margin-left: 20px; }
 
 .breadcrumb {
   background: transparent;

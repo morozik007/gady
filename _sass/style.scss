@@ -175,7 +175,7 @@ a.button-buy {
 		display: block;
 		text-align: left;
 		padding-left: 20px;
-		padding-top: 10px;
+		padding-top: 5px;
 		@include interval-1200 {
 			width: 100%;
 			text-align: center;
@@ -283,7 +283,19 @@ a.button-buy {
 }
 
 .footer {
-
+	.logo {
+		width: 230px;
+		padding-top: 10px;
+		@include interval-1200 {
+			margin: auto;
+		} 
+		img {
+			width: 100%;
+		}
+	}
+	.button-thanks {
+		margin-left: 20px;
+	}
 }
 
 .breadcrumb {
