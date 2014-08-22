@@ -550,7 +550,7 @@ h1.heading {
       text-align: center;
       font-weight: bold; }
     .watch .watch-item p {
-      text-align: left; }
+      text-align: center; }
   .watch .all-news {
     padding-top: 0; }
   @media only screen and (max-width: 768px) {
@@ -661,13 +661,14 @@ h1.heading {
   color: #fff !important;
   width: 137px;
   height: 137px;
-  background: url(../_img/allnews.png) no-repeat left top;
+  background: url(../_img/allnews2.png) no-repeat left top;
   padding-top: 50px;
   position: relative;
   right: -30px;
   top: 10px;
   text-align: center;
   font-weight: bold;
+  border-radius: 137px;
   	/*
   @include iphone {
   		right: 15px;
@@ -686,6 +687,11 @@ h1.heading {
   .all-news-link.all-videos-link {
     padding-top: 40px;
     right: 0px; }
+  .all-news-link.seeall {
+    width: 160px;
+    height: 160px;
+    padding-top: 64px;
+    top: 0; }
   .all-news-link:hover {
     background-position: left bottom; }
   @media only screen and (max-width: 1200px) {

@@ -684,7 +684,7 @@ h1.heading {
 			font-weight: bold;
 		}
 		p {
-			text-align: left;
+			text-align: center;
 		}
 	}
 	.all-news {
@@ -822,16 +822,24 @@ h1.heading {
 	color: #fff !important;
 	width: 137px;
 	height: 137px;
-	background: url(../_img/allnews.png) no-repeat left top;
+	background: url(../_img/allnews2.png) no-repeat left top;
 	padding-top: 50px;
 	position: relative;
 	right: -30px;
 	top: 10px;
 	text-align: center;
 	font-weight: bold;
+	border-radius: 137px;
+	
 	&.all-videos-link {
 		padding-top: 40px;
 		right: 0px;
+	}
+	&.seeall {
+		width: 160px;
+		height: 160px;
+		padding-top: 64px;
+		top: 0;
 	}
 	&:hover {
 		background-position: left bottom;
