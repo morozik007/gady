@@ -103,7 +103,6 @@ a.button-buy {
       top: -15px;
       width: 640px;
       height: 80px;
-      background: url(../_img/content-clouds.png) no-repeat right top;
       z-index: -1; }
   .content a {
     color: #8fd8fb; }
@@ -220,16 +219,21 @@ a.button-buy {
         display: inline-block;
         width: 49%; } }
 
-.footer .logo {
-  width: 230px;
-  padding-top: 10px; }
-  @media only screen and (max-width: 1200px) {
-    .footer .logo {
-      margin: auto; } }
-  .footer .logo img {
-    width: 100%; }
-.footer .button-thanks {
-  margin-left: 20px; }
+.footer {
+  background: #000;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 0; }
+  .footer .logo {
+    width: 230px;
+    padding-top: 10px; }
+    @media only screen and (max-width: 1200px) {
+      .footer .logo {
+        margin: auto; } }
+    .footer .logo img {
+      width: 100%; }
+  .footer .button-thanks {
+    margin-left: 20px; }
 
 .breadcrumb {
   background: transparent;
@@ -329,7 +333,7 @@ h1.heading {
     position: relative;
     float: left;
     width: 75%;
-    padding-right: 0px; }
+    padding-right: 50px; }
     @media only screen and (max-width: 991px) {
       .friends .friends-list {
         float: none;
@@ -659,10 +663,10 @@ h1.heading {
   display: inline-block;
   font-size: 16px;
   color: #fff !important;
-  width: 137px;
-  height: 137px;
+  width: 140px;
+  height: 140px;
   background: url(../_img/allnews2.png) no-repeat left top;
-  padding-top: 50px;
+  padding-top: 53px;
   position: relative;
   right: -30px;
   top: 10px;
@@ -688,10 +692,8 @@ h1.heading {
     padding-top: 40px;
     right: 0px; }
   .all-news-link.seeall {
-    width: 160px;
-    height: 160px;
-    padding-top: 64px;
-    top: 0; }
+    padding-top: 45px;
+    top: 12px; }
   .all-news-link:hover {
     background-position: left bottom; }
   @media only screen and (max-width: 1200px) {
@@ -765,6 +767,9 @@ h1.heading {
       color: #e5432a;
       background: url(../_img/heading-line.png) no-repeat left bottom;
       padding-bottom: 20px; }
+      .news-detail .news-text h3 a {
+        text-decoration: none;
+        color: inherit; }
       .news-detail .news-text h3 .date {
         display: block;
         color: #2d2926;
@@ -797,9 +802,11 @@ h2 {
 
 .main-content {
   padding-bottom: 50px; }
-  @media only screen and (max-width: 600px) {
-    .main-content h4 {
-      font-size: 14px; } }
+  .main-content h4 {
+    line-height: 1.4em; }
+    @media only screen and (max-width: 600px) {
+      .main-content h4 {
+        font-size: 14px; } }
   .main-content .lead {
     font-size: 16px;
     color: #80adc0;
@@ -1019,9 +1026,10 @@ a.backlink {
         padding-top: 13px; } }
   .month .event {
     font-size: 20px;
-    margin: 9px 0px 0 0;
+    margin: 2px 0px 0 0;
     position: relative;
-    padding-right: 130px; }
+    padding-right: 130px;
+    line-height: 1.4em; }
     @media only screen and (max-width: 480px) {
       .month .event {
         padding-right: 0;
@@ -1036,7 +1044,7 @@ a.backlink {
     .month .event .fest-site {
       position: absolute;
       right: -40px;
-      top: 4px;
+      top: 0px;
       font-size: 14px;
       color: #fff;
       border-bottom: solid 1px; }
@@ -1067,7 +1075,6 @@ a.backlink {
     top: -100px;
     width: 640px;
     height: 80px;
-    background: url(../_img/content-clouds.png) no-repeat right top;
     z-index: -1; }
     @media only screen and (max-width: 1024px) {
       .past-releases:before {
@@ -1105,16 +1112,17 @@ a.backlink {
     padding-bottom: 3px; }
 
 .cd {
-  color: #e5432a;
+  color: #fff;
   font-size: 18px;
-  margin-top: -6px; }
+  margin-top: -6px;
+  padding-bottom: 20px; }
 
 .tracklist {
   font-size: 18px;
   padding-left: 40px;
   border-top: dashed 1px #4a4a4a;
   overflow: hidden;
-  margin: 20px 0 30px;
+  margin: 0px 0 30px;
   width: 80%; }
   @media only screen and (max-width: 1024px) {
     .tracklist {
@@ -1151,7 +1159,7 @@ a.backlink {
           font-size: 14px; } }
 
 .video-box {
-  background: white url(../_img/corner.png) repeat-x left bottom;
+  background: #d8d7d1 url(../_img/corner.png) repeat-x left bottom;
   padding: 18px;
   color: #000;
   position: relative;
@@ -1168,7 +1176,7 @@ a.backlink {
     height: 0;
     border-style: solid;
     border-width: 15px 0 15px 15px;
-    border-color: transparent transparent transparent #ffffff; }
+    border-color: transparent transparent transparent #d8d7d1; }
     @media only screen and (max-width: 768px) {
       .video-box:after {
         display: none; } }
@@ -1253,7 +1261,6 @@ a.backlink {
     font-size: 16px; }
 
 .watch-photo {
-  background: url(../_img/clouds_photo.png) no-repeat 170px top;
   padding-top: 20px; }
 
 .photo-carousel {
@@ -1404,17 +1411,15 @@ a.backlink {
   .feedback h2 {
     font-size: 30px; }
   .feedback .contact-form {
-    background: url(../_img/form-pattern.jpg);
-    padding: 20px;
+    padding: 22px 0;
     padding-right: 80px; }
     @media only screen and (max-width: 1200px) {
       .feedback .contact-form {
         padding-right: 20px; } }
     .feedback .contact-form label {
-      color: #000;
-      font-family: "hagin_caps_mediumregular", serif;
-      font-size: 18px;
-      text-transform: uppercase; }
+      color: #cfc990;
+      font-weight: normal;
+      padding-bottom: 4px; }
     .feedback .contact-form .form-control {
       border-radius: 0;
       background: #ece8bd;

@@ -157,7 +157,7 @@ a.button-buy {
 			top: -15px;
 			width: 640px;
 			height: 80px;
-			background: url(../_img/content-clouds.png) no-repeat right top;
+			//background: url(../_img/content-clouds.png) no-repeat right top;
 			z-index: -1;
 		}
 		
@@ -283,6 +283,10 @@ a.button-buy {
 }
 
 .footer {
+	background: #000;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	margin-bottom: 0;
 	.logo {
 		width: 230px;
 		padding-top: 10px;
@@ -407,7 +411,7 @@ h1.heading {
 		position: relative;
 		float: left;
 		width: 75%;
-		padding-right: 0px;
+		padding-right: 50px;
 		@include interval-991 {
 			float: none;
 			width: 100%;
@@ -820,10 +824,10 @@ h1.heading {
 	display: inline-block;
 	font-size: 16px;
 	color: #fff !important;
-	width: 137px;
-	height: 137px;
+	width: 140px;
+	height: 140px;
 	background: url(../_img/allnews2.png) no-repeat left top;
-	padding-top: 50px;
+	padding-top: 53px;
 	position: relative;
 	right: -30px;
 	top: 10px;
@@ -836,10 +840,8 @@ h1.heading {
 		right: 0px;
 	}
 	&.seeall {
-		width: 160px;
-		height: 160px;
-		padding-top: 64px;
-		top: 0;
+		padding-top: 45px;
+		top: 12px;
 	}
 	&:hover {
 		background-position: left bottom;
@@ -939,6 +941,10 @@ h1.heading {
 			color: $red;
 			background: url(../_img/heading-line.png) no-repeat left bottom;
 			padding-bottom: 20px;
+			a {
+				text-decoration: none;
+				color: inherit;
+			}
 			.date {
 				display: block;
 				color: #2d2926;
@@ -981,6 +987,7 @@ h2 {
 	padding-bottom: 50px;
 	
 	h4 {
+		line-height: 1.4em;
 		@include interval-600 {
 			font-size: 14px;
 		}
@@ -1250,9 +1257,10 @@ a.backlink {
 	}
 	.event {
 		font-size: 20px;
-		margin: 9px 0px 0 0;
+		margin: 2px 0px 0 0;
 		position: relative;
 		padding-right: 130px;
+		line-height: 1.4em;
 		@include iphone {
 			padding-right: 0;
 			padding-bottom: 0px;
@@ -1269,7 +1277,7 @@ a.backlink {
 		.fest-site {
 			position: absolute;
 			right: -40px;
-			top: 4px;
+			top: 0px;
 			font-size: 14px;
 			color: #fff;
 			border-bottom: solid 1px;
@@ -1304,7 +1312,7 @@ a.backlink {
 		top: -100px;
 		width: 640px;
 		height: 80px;
-		background: url(../_img/content-clouds.png) no-repeat right top;
+		//background: url(../_img/content-clouds.png) no-repeat right top;
 		z-index: -1;
 		@include ipad-h {
 			right: 0;
@@ -1350,16 +1358,17 @@ a.backlink {
 	}
 }
 .cd {
-	color: $red;
+	color: #fff;
 	font-size: 18px;
 	margin-top: -6px;
+	padding-bottom: 20px;
 }
 .tracklist {
 	font-size: 18px;
 	padding-left: 40px;
 	border-top: dashed 1px #4a4a4a;
 	overflow: hidden;
-	margin: 20px 0 30px;
+	margin: 0px 0 30px;
 	width: 80%;
 	@include ipad-h {
 		width: 100%;
@@ -1405,7 +1414,7 @@ a.backlink {
 }
 
 .video-box {
-	background: #fff url(../_img/corner.png) repeat-x left bottom;
+	background: #d8d7d1 url(../_img/corner.png) repeat-x left bottom;
 	padding: 18px;
 	color: #000;
 	position: relative;
@@ -1422,7 +1431,7 @@ a.backlink {
 		height: 0;
 		border-style: solid;
 		border-width: 15px 0 15px 15px;
-		border-color: transparent transparent transparent #ffffff;
+		border-color: transparent transparent transparent #d8d7d1;
 		@include ipad {
 			display: none;
 		}
@@ -1532,7 +1541,7 @@ a.backlink {
 
 
 .watch-photo {
-	background: url(../_img/clouds_photo.png) no-repeat 170px top;
+	//background: url(../_img/clouds_photo.png) no-repeat 170px top;
 	padding-top: 20px;
 }
 
@@ -1736,17 +1745,19 @@ a.backlink {
 		font-size: 30px;
 	}
 	.contact-form {
-		background: url(../_img/form-pattern.jpg);
-		padding: 20px;
+		//background: url(../_img/form-pattern.jpg);
+		padding: 22px 0;
 		padding-right: 80px;
 		@include interval-1200 {
 			padding-right: 20px;
 		}
 		label {
-			color: #000;
-			font-family: $hagin;
-			font-size: 18px;
-			text-transform: uppercase;
+			color: #cfc990;
+			font-weight: normal;
+			padding-bottom: 4px;
+			//font-family: $hagin;
+			//font-size: 18px;
+			//text-transform: uppercase;
 		}
 		.form-control {
 			border-radius: 0;
