@@ -54,7 +54,7 @@ body {
 	color: #fff;
 }
 .pattern {
-	background: url(../_img/pattern.png);
+	background: url(../_img/pattern_new.png);
 	position: relative;
 	&:before {
 		content: "";
@@ -1189,9 +1189,14 @@ a.backlink {
 	margin-left: -$content-padding;
 	margin-right: -$content-padding;
 	&.past {
-		opacity: .3;
+		opacity: .4;
 		.buy {
 			display: none;
+		}
+		.month-item {
+			&.past {
+				opacity: 1;
+			}
 		}
 	}
 	&.closest {
@@ -1225,7 +1230,7 @@ a.backlink {
 		background: url(../_img/sew.png) repeat-x left bottom;
 		padding: 18px $content-padding;
 		&.past {
-			opacity: .3;
+			opacity: .6;
 		}
 	}
 	small {
