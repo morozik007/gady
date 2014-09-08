@@ -40,7 +40,7 @@
   @media only screen and (max-width: 600px) {
     @content;
   }
-}
+}`
 
 $red: #e5432a;
 $bronze: #cfc990;
@@ -1362,6 +1362,28 @@ a.backlink {
 		padding-bottom: 3px;
 	}
 }
+
+.releases-download-block {
+	background-color:rgba(0,0,0,0.4);
+	font-size:18px;
+	color:#fff;
+	padding: 17px 30px 22px;
+	p {
+		margin: 5px 0 0;
+	}
+	.release-thank{
+		float: right;
+		overflow: hidden;
+		margin-left: 30px;
+		text-align: center;
+		.button-thanks {
+			font-size: 20px;
+			font-weight: bold;
+			margin-top: 8px;
+		}
+	}
+}
+
 .cd {
 	color: #fff;
 	font-size: 18px;
