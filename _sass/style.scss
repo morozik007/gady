@@ -40,9 +40,9 @@
   @media only screen and (max-width: 600px) {
     @content;
   }
-}`
+}
 
-$red: #e5432a;
+$red: #e5432a; 
 $bronze: #cfc990;
 $hagin: 'hagin_caps_mediumregular', serif;
 $content-padding: 18px;
@@ -103,6 +103,19 @@ a.btn-default {
 }
 
 a.button-thanks {
+	color: #fff !important;
+	background: #437826 url(../_img/btn-thank.png);
+	border: none;
+	border-radius: 0;
+	font-size: 15px;
+	padding-left: 30px;
+	padding-right: 30px;
+	font-weight: normal;
+	&:hover {
+		color: inherit !important;
+	}
+}
+button.button-thanks {
 	color: #fff !important;
 	background: #437826 url(../_img/btn-thank.png);
 	border: none;
@@ -1806,7 +1819,38 @@ a.backlink {
 }
 
 
+.donation-form {
+	background: url(../_img/jeans.jpg);
+	padding: 50px 30px;
+	input {
+		width: 100%;
+		font-size: 28px;
+		color: #000;
+		background: #d7d3a9;
+		border: 0;
+		padding: 0 10px;
+	}
+	.grn {
+		float: left;
+		margin-left: -20px;
+		margin-top: 2px;
+		font-size: 24px;
+	}
+	.button-thanks {
+		font-family: $hagin;
+		font-size: 20px;
+	}
+	h3 {
+		margin-top: 0;
+		margin-bottom: 20px;
+	}
+}
 
+.vs {
+	text-align: center;
+	padding: 30px 0;
+	
+}
 
 
 
