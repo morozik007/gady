@@ -65,6 +65,18 @@ a.button-thanks {
   a.button-thanks:hover {
     color: inherit !important; }
 
+button.button-thanks {
+  color: #fff !important;
+  background: #437826 url(../_img/btn-thank.png);
+  border: none;
+  border-radius: 0;
+  font-size: 15px;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-weight: normal; }
+  button.button-thanks:hover {
+    color: inherit !important; }
+
 a.button-buy {
   font-family: "hagin_caps_mediumregular", serif;
   color: #000 !important;
@@ -980,7 +992,7 @@ a.backlink {
     .month.past .month-item.past {
       opacity: 1; }
   .month.closest .month-item:nth-child(2) {
-    background: #222222 url(../_img/sew.png) repeat-x left bottom; }
+    background: #222 url(../_img/sew.png) repeat-x left bottom; }
   .month.closest h3 {
     position: relative;
     overflow: hidden; }
@@ -1112,6 +1124,23 @@ a.backlink {
   .release .release-date {
     font-weight: bold;
     padding-bottom: 3px; }
+
+.releases-download-block {
+  background-color: rgba(0, 0, 0, 0.4);
+  font-size: 18px;
+  color: #fff;
+  padding: 17px 30px 22px; }
+  .releases-download-block p {
+    margin: 5px 0 0; }
+  .releases-download-block .release-thank {
+    float: right;
+    overflow: hidden;
+    margin-left: 30px;
+    text-align: center; }
+    .releases-download-block .release-thank .button-thanks {
+      font-size: 20px;
+      font-weight: bold;
+      margin-top: 8px; }
 
 .cd {
   color: #fff;
@@ -1435,6 +1464,32 @@ a.backlink {
       float: left;
       padding-left: 15px;
       padding-right: 5px; }
+
+.donation-form {
+  background: url(../_img/jeans.jpg);
+  padding: 50px 30px; }
+  .donation-form input {
+    width: 100%;
+    font-size: 28px;
+    color: #000;
+    background: #d7d3a9;
+    border: 0;
+    padding: 0 10px; }
+  .donation-form .grn {
+    float: left;
+    margin-left: -20px;
+    margin-top: 2px;
+    font-size: 24px; }
+  .donation-form .button-thanks {
+    font-family: "hagin_caps_mediumregular", serif;
+    font-size: 20px; }
+  .donation-form h3 {
+    margin-top: 0;
+    margin-bottom: 20px; }
+
+.vs {
+  text-align: center;
+  padding: 30px 0; }
 
 /** Carousel **/
 .jcarousel {
